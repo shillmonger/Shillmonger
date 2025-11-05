@@ -1,13 +1,19 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, MongoClientOptions } from 'mongodb';
 
 if (!process.env.MONGODB_URI) {
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
 }
 
-// Ensure the connection string includes the database name
-const uri = process.env.MONGODB_URI;
-const options = {
+// Force consistent database name in the connection string
+const uri = process.env.MONGODB_URI.replace(
+  /(mongodb(?:\+srv)?:\/\/[^/]+\/)[^?]*/i, 
+  (_, prefix) => `${prefix}shillmonger`
+).replace(/\?/g, '&'); // Replace any existing ? with & for additional options
+
+const options: MongoClientOptions = {
   // Add any additional options here if needed
+  retryWrites: true,
+  w: 'majority'
 };
 
 let client;

@@ -5,13 +5,16 @@ import { Toaster } from "sonner";
 export const metadata = {
   title: "Shillmonger",
   description: "I will make you hustle easier",
+  icons: {
+    icon: "https://i.postimg.cc/rytG8pg3/shillmonger.png",
+  },
+};
+
+export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
-  icons: {
-    icon: "https://i.postimg.cc/rytG8pg3/shillmonger.png",
-  },
 };
 
 
