@@ -19,24 +19,25 @@ interface Skill {
 
 const education: TimelineItem[] = [
   {
-    title: "University School of Arts",
+    title: "University",
     date: "2013 – 2014",
     description:
       "There I learnt a wide range of topics that are essential to understanding both the theory and practical aspects of computing. This involved programming fundamentals, computer architecture, operating systems, databases, software engineering, problem solving collaboration and communication soft skills.",
   },
   {
-    title: "Verbum Networks of Art",
-    date: "2014 – 2015",
-    description:
-      "I chose my master's degree in technology. There I deepened my knowledge, enhanced my skills and improved my career prospects in a competitive job market.",
-    starred: true,
-  },
-  {
-    title: "High School of Art And Design",
+    title: "Art And Design",
     date: "2015 – 2016",
     description:
       "There I learnt foundational courses and computer sciences fundamentals, in the institution chose my specialization in web-development involving front- and back-end technologies, user interface designs and content management systems front-and back-end.",
+    starred: true,
   },
+ {
+  title: "Verbum Networks lmt",
+  date: "2014 – 2015",
+  description:
+    "I learned Web Development here, focusing on foundational skills and practical application. I later returned to collect my CV and continue building my career prospects in the competitive tech field.",
+  starred: true,
+},
 ]
 
 const experience: TimelineItem[] = [
@@ -63,7 +64,8 @@ const experience: TimelineItem[] = [
 ]
 
 const skills: Skill[] = [
-  { name: "Forex", value: 65 },
+  { name: "Forex Trading", value: 35 },
+  { name: "Reply Guy", value: 60 },
   { name: "Web Design", value: 80 },
   { name: "Web Development", value: 85 },
   { name: "Airdrop Specialist", value: 100 },

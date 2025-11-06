@@ -46,6 +46,13 @@ const projects: Project[] = [
     description:
       "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
   },
+{
+  title: "Moon Chad",
+  category: "Meme Project",
+  image: "https://i.postimg.cc/tT6sXpJg/Screenshot-2025-11-06-153321.jpg",
+  link: "moonchad.onrender.com",
+  description:
+"A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",},
   {
     title: "Dynamiqerra",
     category: "Web Development",
@@ -95,6 +102,14 @@ const projects: Project[] = [
     description:
       "A viral content hub built for scalability and engagement. Optimized for meme creators, marketers, and social brands seeking rapid reach.",
   },
+ {
+  title: "Task Kash",
+  category: "Web Application",
+  image: "https://i.postimg.cc/FRpYBGBG/Screenshot-2025-11-06-151959.jpg",
+  link: "https://taskkash-project.onrender.com/",
+  description:
+    "A platform designed to connect users with large-scale social media projects (e.g., promotional campaigns, engagement drives). Users can perform specific tasks and earn money.",
+},
   {
     title: "Boost Media",
     category: "Web Development",
@@ -111,22 +126,29 @@ const projects: Project[] = [
     description:
       "A crypto-themed meme generator where blockchain meets banter. Perfect for traders who like humor with their market charts.",
   },
-  {
-    title: "Gods Eye",
-    category: "Web Development",
-    image: "https://i.postimg.cc/SK8004M7/Screenshot-2025-11-05-170556.jpg",
-    link: "https://gods-eye-0.onrender.com",
-    description:
-      "A cybersecurity-focused analytics tool providing real-time network monitoring and data visualization. Designed for precision and intelligence.",
-  },
+{
+  title: "Gods Eye",
+  category: "Web Development",
+  image: "https://i.postimg.cc/SK8004M7/Screenshot-2025-11-05-170556.jpg",
+  link: "https://gods-eye-0.onrender.com",
+  description:
+    "Platform dedicated to ethical cybersecurity training. Users can learn and practice the methods used to build phishing websites and generate fake receipts, gaining critical knowledge for understanding, identifying.",
+},
   {
     title: "Gift Castle",
     category: "Web Development",
     image: "https://i.postimg.cc/pTYWHNxq/gift-castle-onrender-com-2.png",
     link: "https://gift-castle.onrender.com/",
     description:
-      "An elegant gifting platform offering curated collections and seamless checkout. Designed to make every celebration memorable and hassle-free.",
-  },
+"A secure and user-friendly marketplace for buying and selling gift cards. The platform facilitates fast, reliable transactions, allowing users to instantly exchange unwanted gift cards for cash.",  },
+ {
+  title: "Trust Loan",
+  category: "Web Application",
+  image: "https://i.postimg.cc/hGk98C79/Screenshot-2025-11-06-154256.jpg",
+  link: "https://trustloaneth.onrender.com/",
+  description:
+    "A Decentralized Finance (DeFi) platform built to provide short-term crypto loans specifically tailored for active traders. It allows users to borrow digital assets, enabling them to leverage their trading positions.",
+},
   {
     title: "Wizard Meme",
     category: "Meme Project",
