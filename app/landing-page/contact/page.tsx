@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "@/components/landing-page/Sidebar";
 import Nav from "@/components/landing-page/Nav";
 import { Button } from "@/components/ui/button";
@@ -8,8 +8,51 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Send } from "lucide-react";
+import { toast } from "sonner";
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    const payload = {
+      fullname: formData.get("fullname") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const res = await fetch("/api/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      // Show success message
+      toast.success(data.message || "Message sent successfully!");
+      
+      // Safely reset the form if it exists
+      if (form) {
+        form.reset();
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error(error instanceof Error ? error.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main
       className="min-h-screen bg-background text-foreground 
@@ -51,64 +94,81 @@ export default function ContactPage() {
           </div>
         </section>
 
-       {/* Contact Form */}
-<section>
-  <Card className="bg-muted border border-border rounded-2xl shadow-md px-3 py-5 sm:px-6 sm:py-6">
-    <CardHeader className="p-0 mb-4">
-      <CardTitle className="text-2xl font-semibold text-foreground">
-        Send a Message
-      </CardTitle>
-    </CardHeader>
-
-    <CardContent className="p-0">
-      <form
-        id="contactForm"
-        action="/send-message"
-        method="post"
-        className="space-y-6"
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Input
-            type="text"
-            name="fullname"
-            placeholder="Full name"
-            required
-            className="py-6 bg-muted dark:bg-card border border-border text-foreground placeholder:text-muted-foreground transition-colors duration-300"
-          />
-          <Input
-            type="email"
-            name="email"
-            placeholder="Email address"
-            required
-            className="py-6 bg-muted dark:bg-card border border-border text-foreground placeholder:text-muted-foreground transition-colors duration-300"
-          />
-        </div>
-
-        <Textarea
-          name="message"
-          placeholder="Your message"
-          required
-          className="min-h-[150px] dark:bg-card border-border text-foreground"
-        />
-
-        <div className="flex justify-end">
-          <Button
-            type="submit"
-            className="w-full sm:w-auto bg-foreground text-background 
-            hover:bg-foreground/90 font-semibold text-[15px]
-            rounded-lg py-6 px-8 flex items-center justify-center gap-2
-            transition-all cursor-pointer"
+        {/* Contact Form */}
+        <section>
+          <Card
+            className="
+              bg-transparent border-none rounded-none shadow-none p-0
+              sm:bg-muted sm:border sm:rounded-2xl sm:shadow-md sm:px-6 sm:py-6
+            "
           >
-            <Send className="w-5 h-5" />
-            Send Message
-          </Button>
-        </div>
-      </form>
-    </CardContent>
-  </Card>
-</section>
+            <CardHeader className="p-0">
+              <CardTitle className="text-2xl font-semibold text-foreground">
+                Send a Message
+              </CardTitle>
+            </CardHeader>
 
+            <CardContent className="p-0">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Input
+                    type="text"
+                    name="fullname"
+                    placeholder="Full name"
+                    required
+                    className="
+                      py-6 bg-muted dark:bg-card border border-border text-foreground placeholder:text-muted-foreground
+                      transition-colors duration-300 w-full
+                    "
+                  />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    required
+                    className="
+                      py-6 bg-muted dark:bg-card border border-border text-foreground placeholder:text-muted-foreground
+                      transition-colors duration-300 w-full
+                    "
+                  />
+                </div>
+
+                <Textarea
+                  name="message"
+                  placeholder="Your message"
+                  required
+                  className="min-h-[150px] dark:bg-card border-border text-foreground w-full"
+                />
+
+                <div className="flex justify-end">
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    className="
+                      w-full sm:w-auto bg-foreground text-background 
+                      hover:bg-foreground/90 font-semibold text-[15px]
+                      rounded-lg py-6 px-8 flex items-center justify-center gap-2
+                      transition-all cursor-pointer
+                    "
+                  >
+                    {loading ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </section>
       </section>
     </main>
   );
 }
+
+
+
