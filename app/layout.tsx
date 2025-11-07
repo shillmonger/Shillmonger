@@ -1,10 +1,10 @@
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
+import { Providers } from "@/components/providers";
 
 export const metadata = {
   title: "Shillmonger",
-  description: "I will make you hustle easier",
+  description: "Let me make you a Website",
   icons: {
     icon: "https://i.postimg.cc/rytG8pg3/shillmonger.png",
   },
@@ -26,13 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="shillmonger-theme"
-        >
+        <Providers>
           <div className="min-h-screen transition-colors duration-300">
             {children}
             <Toaster
@@ -54,7 +48,7 @@ export default function RootLayout({
               closeButton
             />
           </div>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

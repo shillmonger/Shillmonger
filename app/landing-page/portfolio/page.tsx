@@ -31,7 +31,7 @@ const projects: Project[] = [
       "A meme-sharing community where creativity meets humor. Users can create, post, and explore the funniest trends of the day with ease and style.",
   },
   {
-    title: "DE-MPC Server",
+    title: "MPC Server",
     category: "Web Development",
     image: "https://i.postimg.cc/Y218g962/Screenshot-2025-11-05-173007.jpg",
     link: "https://de-mcp-server.onrender.com",
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "A secure, high-performance backend server setup designed for decentralized applications. Optimized for scalability, speed, and seamless API management.",
   },
   {
-    title: "Regal Investmentz",
+    title: "Investmentz",
     category: "Web Application",
     image: "https://i.postimg.cc/y6DdDgcr/Screenshot-2025-11-05-165430.jpg",
     link: "https://regalinvestmentz.com",
@@ -81,7 +81,7 @@ const projects: Project[] = [
   title: "Cyber Yearn",
   category: "Web Application",
   image: "https://i.postimg.cc/fbqJr44Q/cyberyearn.png",
-  link: "https://cyberyearn.com",
+  link: "https://cy-frontend-beta.vercel.app/",
   description:
     "An educational cyber platform where people learn about cybersecurity, ethical hacking, and digital defense. Built to empower users with real-world knowledge and hands-on skills.",
 },
@@ -157,6 +157,14 @@ const projects: Project[] = [
     description:
       "A fantasy-inspired meme creation portal. Users can summon wizard-themed humor and share spellbinding content across the web.",
   },
+{
+  title: "Library",
+  category: "Web Application",
+  image: "https://i.postimg.cc/MTrLFgby/Screenshot-2025-11-07-072746.jpg",
+  link: "https://library-ukj1.onrender.com/",
+  description:
+    "This platform allows people to read important books, view helpful screenshots and PDFs, and watch instructional videos, serving as a comprehensive resource for knowledge and learning.",
+},
 ]
 
 const PortfolioPage = () => {

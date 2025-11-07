@@ -26,12 +26,25 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
+// Get the first letter of the name for the avatar
+const getInitials = (name: string) => {
+  return name
+    .split(' ')
+    .map(word => word[0])
+    .join('')
+    .toUpperCase()
+    .substring(0, 2);
+};
+
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "John Doe", // This will be replaced with actual user data
+    email: "user@example.com", // This will be replaced with actual user data
+    get avatar() {
+      const initials = getInitials(this.name);
+      return `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random&color=fff&size=128`;
+    },
   },
   teams: [
     {
@@ -156,7 +169,38 @@ const data = {
   ],
 }
 
+import { useSession } from "next-auth/react"
+import { useEffect, useState } from "react"
+
+interface UserData {
+  name: string;
+  email: string;
+  avatar: string;
+}
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { data: session } = useSession()
+  const [userData, setUserData] = useState<UserData>({
+    name: session?.user?.name || 'User',
+    email: session?.user?.email || 'user@example.com',
+    avatar: '', // This will be set in the effect
+  });
+
+  // Update user data when session changes
+  useEffect(() => {
+    if (session?.user) {
+      const userName = session.user.name || 'User';
+      const userEmail = session.user.email || 'user@example.com';
+      const initials = getInitials(userName);
+      
+      setUserData({
+        name: userName,
+        email: userEmail,
+        avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random&color=fff&size=128`
+      });
+    }
+  }, [session]);
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -167,7 +211,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={userData} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

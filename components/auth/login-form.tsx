@@ -36,10 +36,20 @@ export function LoginForm({
       });
 
       if (result?.error) {
-        // Map common error messages to more user-friendly ones
-        const errorMessage = result.error.includes('CredentialsSignin')
-          ? 'Invalid email or password'
-          : result.error;
+        // The error message comes directly from the server
+        let errorMessage = result.error;
+        
+        // Map specific error messages to more user-friendly ones if needed
+        if (errorMessage === 'Invalid email or password') {
+          // We keep the same message as it's already user-friendly
+        } else if (errorMessage === 'Account not properly set up') {
+          errorMessage = 'Your account is not properly set up. Please contact support.';
+        } else if (errorMessage.includes('Please enter both email and password')) {
+          // Keep the original message as it's clear enough
+        } else if (errorMessage.includes('Authentication failed')) {
+          errorMessage = 'Authentication failed. Please check your credentials and try again.';
+        }
+        
         throw new Error(errorMessage);
       }
 

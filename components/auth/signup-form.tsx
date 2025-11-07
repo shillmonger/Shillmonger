@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Eye, EyeOff } from "lucide-react"; // 👁️ Added icons
+import { Eye, EyeOff } from "lucide-react"; // Added icons
 
 interface FormData {
   name: string;
@@ -48,17 +48,42 @@ export function SignupForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
+    // Validate form fields
+    if (!formData.name.trim()) {
       toast.error('Validation Error', {
-        description: "Passwords don't match. Please make sure both passwords are identical.",
+        description: 'Please enter your full name',
+        duration: 4000,
+      });
+      return;
+    }
+
+    if (!/^\d{11}$/.test(formData.phone)) {
+      toast.error('Validation Error', {
+        description: 'Please enter a valid 11-digit phone number',
+        duration: 4000,
+      });
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast.error('Validation Error', {
+        description: 'Please enter a valid email address',
         duration: 4000,
       });
       return;
     }
 
     if (formData.password.length < 6) {
-      toast.error('Validation Error', {
-        description: 'Password must be at least 6 characters long.',
+      toast.error('Password Requirements', {
+        description: 'Password must be at least 6 characters long',
+        duration: 4000,
+      });
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      toast.error('Password Mismatch', {
+        description: 'The passwords you entered do not match. Please try again.',
         duration: 4000,
       });
       return;
@@ -67,6 +92,16 @@ export function SignupForm({
     setIsLoading(true);
 
     try {
+      // First, check if the email is already registered
+      const checkEmailResponse = await fetch(`/api/check-email?email=${encodeURIComponent(formData.email)}`);
+      if (checkEmailResponse.ok) {
+        const emailCheck = await checkEmailResponse.json();
+        if (emailCheck.exists) {
+          throw new Error('This email is already registered. Please use a different email or log in.');
+        }
+      }
+
+      // Proceed with registration
       const response = await fetch("/api/register", {
         method: "POST",
         headers: {
@@ -81,49 +116,31 @@ export function SignupForm({
         }),
       });
 
-      const data = await response.json();
+      // Handle non-JSON responses
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        const text = await response.text();
+        throw new Error('Received invalid response from server');
+      }
+
+      const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
         // Handle specific error cases
-        let errorMessage = data.message || "Failed to create account";
-        if (errorMessage.includes('duplicate key error') && errorMessage.includes('email')) {
-          errorMessage = 'This email is already registered. Please use a different email or log in.';
-        }
+        const errorMessage = data.message || "Failed to create account. Please try again.";
         throw new Error(errorMessage);
       }
 
-      // Auto-login after successful registration
-      const signInRes = await fetch("/api/auth/callback/credentials", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: formData.email,
-          password: formData.password,
-          redirect: false,
-        }),
-      });
-
-      if (!signInRes.ok) {
-        // Account was created but auto-login failed
-        toast.success('Account created successfully!', {
-          description: 'Please log in with your new credentials.',
-          duration: 5000,
-        });
-        router.push('/auth-page/login');
-        return;
-      }
-
-      toast.success('Welcome to Shillmonger!', {
-        description: 'Your account has been created successfully. Redirecting to your dashboard...',
-        duration: 2000,
+      // Registration successful, show success message
+      toast.success('Account created successfully!', {
+        description: 'You can now log in with your credentials.',
+        duration: 5000,
       });
       
-      // Small delay to show the success message before redirect
+      // Redirect to login page after a short delay
       setTimeout(() => {
-        router.push('/dashboard');
-      }, 1500);
+        router.push('/auth-page/login');
+      }, 2000);
     } catch (error) {
       console.error("Registration error:", error);
       toast.error('Registration failed', {

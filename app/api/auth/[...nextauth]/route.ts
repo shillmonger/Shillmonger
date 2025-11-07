@@ -76,7 +76,9 @@ export const authOptions: NextAuthOptions = {
           } as User;
         } catch (error) {
           console.error('Authentication error:', error);
-          throw new Error('Authentication failed. Please try again.');
+          // Pass through the original error message if it exists
+          const errorMessage = error instanceof Error ? error.message : 'Authentication failed. Please try again.';
+          throw new Error(errorMessage);
         }
       }
     })
