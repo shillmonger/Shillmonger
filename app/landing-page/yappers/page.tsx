@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Link from "next/link";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import { Home } from "lucide-react";
+import { Home as HomeIcon } from "lucide-react";
 
 export default function ParallaxPage() {
   const layersRef = useRef<HTMLDivElement>(null);
@@ -121,7 +121,7 @@ export default function ParallaxPage() {
     transition-all duration-300 font-semibold shadow-2xl cursor-pointer
   "
               >
-                <Home size={16} />
+                <HomeIcon size={16} />
                 Go Back Home
               </button>
             </Link>
