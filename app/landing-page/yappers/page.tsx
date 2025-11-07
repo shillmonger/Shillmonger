@@ -108,85 +108,86 @@ export default function ParallaxPage() {
         {/* Parallax container */}
         <div className="relative overflow-hidden w-full">
           {/* Header section */}
-          <section className="relative z-10 flex items-center justify-center min-h-[100svh]">
-            {/* Go Back Home (top-left) */}
-            <Link href="/">
-              <button
-                className="
-    absolute overflow-hidden z-50 left-4 sm:left-6 flex items-center gap-2
-    px-2 py-2 text-sm sm:px-5 sm:py-2.5 sm:text-base lg:px-6 lg:py-3
-    top-10 lg:top-10
-    bg-white/10 backdrop-blur-md border border-white/30 rounded-xl
-    hover:bg-white hover:text-black
-    transition-all duration-300 font-semibold shadow-2xl cursor-pointer
-  "
-              >
-                <HomeIcon size={16} />
-                Go Back Home
-              </button>
-            </Link>
+<section className="relative z-10 flex items-center justify-center min-h-[100svh]">
+  {/* Go Back Home (top-left) */}
+  <Link href="/">
+    <button
+      className="
+        absolute overflow-hidden z-50 left-4 sm:left-6 flex items-center gap-2
+        px-2 py-2 text-sm sm:px-5 sm:py-2.5 sm:text-base lg:px-6 lg:py-3
+        top-10 lg:top-10
+        bg-white/10 backdrop-blur-md border border-white/30 rounded-xl
+        hover:bg-white hover:text-black
+        transition-all duration-300 font-semibold shadow-2xl cursor-pointer
+      "
+    >
+      <HomeIcon size={16} />
+      Go Back Home
+    </button>
+  </Link>
 
-            <div className="absolute inset-0 h-[120%] w-full">
-              {/* Black line at bottom */}
-              <div className="absolute bottom-[-1px] left-0 z-20 h-px w-full bg-black" />
+  <div className="absolute inset-0 h-[120%] w-full">
+    {/* Black line at bottom */}
+    <div className="absolute bottom-[-1px] left-0 z-20 h-px w-full bg-black" />
 
-              {/* Layers container */}
-              <div
-                ref={layersRef}
-                data-parallax-layers
-                className="absolute inset-0 h-full w-full overflow-hidden"
-              >
-                <img
-                  src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795be09b462b2e8ebf71_osmo-parallax-layer-3.webp"
-                  loading="eager"
-                  data-parallax-layer="1"
-                  alt=""
-                  className="pointer-events-none absolute left-0 h-[117.5%] w-full max-w-none object-cover"
-                  style={{ top: "-17.5%" }}
-                />
-                <img
-                  src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795b4d5ac529e7d3a562_osmo-parallax-layer-2.webp"
-                  loading="eager"
-                  data-parallax-layer="2"
-                  alt=""
-                  className="pointer-events-none absolute left-0 h-[117.5%] w-full max-w-none object-cover"
-                  style={{ top: "-17.5%" }}
-                />
-                <div
-                  data-parallax-layer="3"
-                  className="absolute inset-0 flex h-[100svh] w-full items-center justify-center"
-                >
-                  <h2
-                    className="
-    m-0 mb-[0.1em] mr-[0.075em]
-    text-center font-extrabold leading-[1]
-    text-[13vw] sm:text-[12vw] md:text-[11vw] lg:text-[10vw] cursor-pointer
-  "
-                    style={{ fontFamily: "'PP Neue Corp Wide', sans-serif" }}
-                  >
-                    Shillmonger
-                  </h2>
-                </div>
-                <img
-                  src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795bb5aceca85011ad83_osmo-parallax-layer-1.webp"
-                  loading="eager"
-                  data-parallax-layer="4"
-                  alt=""
-                  className="pointer-events-none absolute left-0 h-[117.5%] w-full max-w-none object-cover"
-style={{ top: "-17.5%" }}
-                />
-              </div>
+    {/* Layers container */}
+    <div
+      ref={layersRef}
+      data-parallax-layers
+      className="absolute inset-0 h-full w-full overflow-hidden"
+    >
+      <img
+        src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795be09b462b2e8ebf71_osmo-parallax-layer-3.webp"
+        loading="eager"
+        data-parallax-layer="1"
+        alt=""
+        className="pointer-events-none absolute left-0 h-[117.5%] w-full max-w-none object-cover"
+        style={{ top: "calc(-17.5%)" }}
+      />
+      <img
+        src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795b4d5ac529e7d3a562_osmo-parallax-layer-2.webp"
+        loading="eager"
+        data-parallax-layer="2"
+        alt=""
+        className="pointer-events-none absolute left-0 h-[117.5%] w-full max-w-none object-cover"
+        style={{ top: "calc(-17.5%)" }}
+      />
+      <div
+        data-parallax-layer="3"
+        className="absolute inset-0 flex h-[100svh] w-full items-center justify-center"
+      >
+        <h2
+          className="
+            m-0 mb-[0.1em] mr-[0.075em]
+            text-center font-extrabold leading-[1]
+            text-[13vw] sm:text-[12vw] md:text-[11vw] lg:text-[10vw] cursor-pointer
+          "
+          style={{ fontFamily: "'PP Neue Corp Wide', sans-serif" }}
+        >
+          Shillmonger
+        </h2>
+      </div>
+      <img
+        src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795bb5aceca85011ad83_osmo-parallax-layer-1.webp"
+        loading="eager"
+        data-parallax-layer="4"
+        alt=""
+        className="pointer-events-none absolute left-0 h-[117.5%] w-full max-w-none object-cover"
+        style={{ top: "calc(-17.5%)" }}
+      />
+    </div>
 
-              {/* Bottom fade */}
-              <div
-                className="absolute bottom-0 left-0 z-30 h-[20%] w-full"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.738) 19%, rgba(0,0,0,0.541) 34%, rgba(0,0,0,0.382) 47%, rgba(0,0,0,0.278) 56.5%, rgba(0,0,0,0.194) 65%, rgba(0,0,0,0.126) 73%, rgba(0,0,0,0.075) 80.2%, rgba(0,0,0,0.042) 86.1%, rgba(0,0,0,0.021) 91%, rgba(0,0,0,0.008) 95.2%, rgba(0,0,0,0.002) 98.2%, transparent 100%)",
-                }}
-              />
-            </div>
-          </section>
+    {/* Bottom fade */}
+    <div
+      className="absolute bottom-0 left-0 z-30 h-[20%] w-full"
+      style={{
+        background:
+          "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.738) 19%, rgba(0,0,0,0.541) 34%, rgba(0,0,0,0.382) 47%, rgba(0,0,0,0.278) 56.5%, rgba(0,0,0,0.194) 65%, rgba(0,0,0,0.126) 73%, rgba(0,0,0,0.075) 80.2%, rgba(0,0,0,0.042) 86.1%, rgba(0,0,0,0.021) 91%, rgba(0,0,0,0.008) 95.2%, rgba(0,0,0,0.002) 98.2%, transparent 100%)",
+      }}
+    />
+  </div>
+</section>
+
 
           {/* --- Content Section --- */}
           <section
