@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import Image from "next/image"
-import { Eye, ChevronDown } from "lucide-react"
-import Sidebar from "@/components/landing-page/Sidebar"
-import Nav from "@/components/landing-page/Nav"
-import { Button } from "@/components/ui/button"
+import React, { useState } from "react";
+import Image from "next/image";
+import { Eye, ChevronDown } from "lucide-react";
+import Sidebar from "@/components/landing-page/Sidebar";
+import Nav from "@/components/landing-page/Nav";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
 interface Project {
-  title: string
-  category: string
-  image: string
-  link: string
-  description: string
+  title: string;
+  category: string;
+  image: string;
+  link: string;
+  description: string;
 }
 
 const projects: Project[] = [
@@ -46,13 +46,14 @@ const projects: Project[] = [
     description:
       "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
   },
-{
-  title: "Moon Chad",
-  category: "Meme Project",
-  image: "https://i.postimg.cc/tT6sXpJg/Screenshot-2025-11-06-153321.jpg",
-  link: "moonchad.onrender.com",
-  description:
-"A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",},
+  {
+    title: "Moon Chad",
+    category: "Meme Project",
+    image: "https://i.postimg.cc/tT6sXpJg/Screenshot-2025-11-06-153321.jpg",
+    link: "moonchad.onrender.com",
+    description:
+      "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
+  },
   {
     title: "Dynamiqerra",
     category: "Web Development",
@@ -77,14 +78,14 @@ const projects: Project[] = [
     description:
       "An advanced eCommerce web development project offering speed, reliability, and engaging product showcases to enhance the online shopping experience.",
   },
- {
-  title: "Cyber Yearn",
-  category: "Web Application",
-  image: "https://i.postimg.cc/fbqJr44Q/cyberyearn.png",
-  link: "https://cy-frontend-beta.vercel.app/",
-  description:
-    "An educational cyber platform where people learn about cybersecurity, ethical hacking, and digital defense. Built to empower users with real-world knowledge and hands-on skills.",
-},
+  {
+    title: "Cyber Yearn",
+    category: "Web Application",
+    image: "https://i.postimg.cc/fbqJr44Q/cyberyearn.png",
+    link: "https://cy-frontend-beta.vercel.app/",
+    description:
+      "An educational cyber platform where people learn about cybersecurity, ethical hacking, and digital defense. Built to empower users with real-world knowledge and hands-on skills.",
+  },
 
   {
     title: "Troll Meme",
@@ -102,14 +103,14 @@ const projects: Project[] = [
     description:
       "A viral content hub built for scalability and engagement. Optimized for meme creators, marketers, and social brands seeking rapid reach.",
   },
- {
-  title: "Task Kash",
-  category: "Web Application",
-  image: "https://i.postimg.cc/FRpYBGBG/Screenshot-2025-11-06-151959.jpg",
-  link: "https://taskkash-project.onrender.com/",
-  description:
-    "A platform designed to connect users with large-scale social media projects (e.g., promotional campaigns, engagement drives). Users can perform specific tasks and earn money.",
-},
+  {
+    title: "Task Kash",
+    category: "Web Application",
+    image: "https://i.postimg.cc/FRpYBGBG/Screenshot-2025-11-06-151959.jpg",
+    link: "https://taskkash-project.onrender.com/",
+    description:
+      "A platform designed to connect users with large-scale social media projects (e.g., promotional campaigns, engagement drives). Users can perform specific tasks and earn money.",
+  },
   {
     title: "Boost Media",
     category: "Web Development",
@@ -126,29 +127,30 @@ const projects: Project[] = [
     description:
       "A crypto-themed meme generator where blockchain meets banter. Perfect for traders who like humor with their market charts.",
   },
-{
-  title: "Gods Eye",
-  category: "Web Development",
-  image: "https://i.postimg.cc/SK8004M7/Screenshot-2025-11-05-170556.jpg",
-  link: "https://gods-eye-0.onrender.com",
-  description:
-    "Platform dedicated to ethical cybersecurity training. Users can learn and practice the methods used to build phishing websites and generate fake receipts, gaining critical knowledge for understanding, identifying.",
-},
+  {
+    title: "Gods Eye",
+    category: "Web Development",
+    image: "https://i.postimg.cc/SK8004M7/Screenshot-2025-11-05-170556.jpg",
+    link: "https://gods-eye-0.onrender.com",
+    description:
+      "Platform dedicated to ethical cybersecurity training. Users can learn and practice the methods used to build phishing websites and generate fake receipts, gaining critical knowledge for understanding, identifying.",
+  },
   {
     title: "Gift Castle",
     category: "Web Development",
     image: "https://i.postimg.cc/pTYWHNxq/gift-castle-onrender-com-2.png",
     link: "https://gift-castle.onrender.com/",
     description:
-"A secure and user-friendly marketplace for buying and selling gift cards. The platform facilitates fast, reliable transactions, allowing users to instantly exchange unwanted gift cards for cash.",  },
- {
-  title: "Trust Loan",
-  category: "Web Application",
-  image: "https://i.postimg.cc/hGk98C79/Screenshot-2025-11-06-154256.jpg",
-  link: "https://trustloaneth.onrender.com/",
-  description:
-    "A Decentralized Finance (DeFi) platform built to provide short-term crypto loans specifically tailored for active traders. It allows users to borrow digital assets, enabling them to leverage their trading positions.",
-},
+      "A secure and user-friendly marketplace for buying and selling gift cards. The platform facilitates fast, reliable transactions, allowing users to instantly exchange unwanted gift cards for cash.",
+  },
+  {
+    title: "Trust Loan",
+    category: "Web Application",
+    image: "https://i.postimg.cc/hGk98C79/Screenshot-2025-11-06-154256.jpg",
+    link: "https://trustloaneth.onrender.com/",
+    description:
+      "A Decentralized Finance (DeFi) platform built to provide short-term crypto loans specifically tailored for active traders. It allows users to borrow digital assets, enabling them to leverage their trading positions.",
+  },
   {
     title: "Wizard Meme",
     category: "Meme Project",
@@ -157,22 +159,27 @@ const projects: Project[] = [
     description:
       "A fantasy-inspired meme creation portal. Users can summon wizard-themed humor and share spellbinding content across the web.",
   },
-{
-  title: "Library",
-  category: "Web Application",
-  image: "https://i.postimg.cc/MTrLFgby/Screenshot-2025-11-07-072746.jpg",
-  link: "https://library-ukj1.onrender.com/",
-  description:
-    "This platform allows people to read important books, view helpful screenshots and PDFs, and watch instructional videos, serving as a comprehensive resource for knowledge and learning.",
-},
-]
+  {
+    title: "Library",
+    category: "Web Application",
+    image: "https://i.postimg.cc/MTrLFgby/Screenshot-2025-11-07-072746.jpg",
+    link: "https://library-ukj1.onrender.com/",
+    description:
+      "This platform allows people to read important books, view helpful screenshots and PDFs, and watch instructional videos, serving as a comprehensive resource for knowledge and learning.",
+  },
+];
 
 const PortfolioPage = () => {
-  const [filter, setFilter] = useState<string>("All")
-  const categories = ["All", "Web Application", "Web Development", "Meme Project"]
+  const [filter, setFilter] = useState<string>("All");
+  const categories = [
+    "All",
+    "Web Application",
+    "Web Development",
+    "Meme Project",
+  ];
 
   const filteredProjects =
-    filter === "All" ? projects : projects.filter((p) => p.category === filter)
+    filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-40 flex flex-col md:flex-row gap-6">
@@ -269,8 +276,12 @@ const PortfolioPage = () => {
               </figure>
               <div className="p-5">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground">{project.category}</p>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {project.category}
+                  </p>
                 </div>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   {project.description}
@@ -281,7 +292,7 @@ const PortfolioPage = () => {
         </section>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default PortfolioPage
+export default PortfolioPage;

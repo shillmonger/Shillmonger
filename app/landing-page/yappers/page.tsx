@@ -68,7 +68,7 @@ export default function ParallaxPage() {
     return () => {
       clearTimeout(timeout);
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
+      gsap.ticker.remove(lenis.raf);  
     };
   }, []);
 
@@ -206,7 +206,7 @@ export default function ParallaxPage() {
                   className="
           w-full px-6 py-3 text-sm
           sm:px-10 sm:py-4 sm:text-base
-          border-1 bg-white text-black font-bold rounded-2xl shadow-lg
+          border border-gray-300 bg-white text-black font-bold rounded-2xl shadow-lg
           hover:bg-gray-200 transition cursor-pointer
         "
                 >
@@ -219,7 +219,7 @@ export default function ParallaxPage() {
                   className="
           w-full px-6 py-3 text-sm
           sm:px-10 sm:py-4 sm:text-base
-          border-1 border-white text-white font-bold rounded-2xl shadow-lg
+          border border-white text-white font-bold rounded-2xl shadow-lg
           hover:bg-white hover:text-black transition cursor-pointer
         "
                 >
