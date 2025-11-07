@@ -145,7 +145,7 @@ export default function ParallaxPage() {
                 >
                   <h2
                     className="
-                      m-0 mb-[0.1em] mr-[0.075em]
+                      m-0 mb-[1.5em] mr-[0.075em]
                       text-center font-extrabold leading-[1]
                       text-[13vw] sm:text-[12vw] md:text-[11vw] lg:text-[10vw] cursor-pointer
                     "
