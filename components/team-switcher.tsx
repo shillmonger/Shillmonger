@@ -86,7 +86,7 @@ export function TeamSwitcher({
               <div className="font-medium text-muted-foreground">Add team</div>
             </DropdownMenuItem>
           </DropdownMenuContent>
-        </DropdownMenu>j
+        </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>
   )
