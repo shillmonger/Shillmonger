@@ -130,6 +130,91 @@ export default function HomePage() {
             </ul>
           </section>
 
+
+
+{/* View / Download CV Buttons */}
+<div className="mt-12 flex justify-between items-center flex-wrap gap-4">
+  {/* View */}
+  <a
+    href="https://small-bird-396.linkyhost.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-8 py-4 rounded-3xl text-lg font-semibold cursor-pointer cv-button"
+  >
+    View My CV
+  </a>
+
+  {/* Download */}
+  <a
+    href="https://small-bird-396.linkyhost.com"
+    download="My-CV.pdf"
+    className="px-8 py-4 rounded-3xl text-lg font-semibold cursor-pointer cv-button"
+  >
+    Download CV
+  </a>
+</div>
+
+<style jsx>{`
+  .cv-button {
+    @apply inline-block relative;
+
+    background: var(--card);
+    color: var(--foreground);
+    border: 3px solid transparent;
+    border-radius: 1.5rem;
+
+    --border-angle: 0turn;
+
+    --main-bg: conic-gradient(
+      from var(--border-angle),
+      var(--card),
+      var(--card) 5%,
+      var(--card) 60%,
+      var(--card) 95%
+    );
+
+    --gradient-border: conic-gradient(
+      from var(--border-angle),
+      transparent 25%,
+      var(--primary),
+      var(--primary),
+      transparent
+    );
+
+    background:
+      var(--main-bg) padding-box,
+      var(--gradient-border) border-box,
+      var(--main-bg) border-box;
+    animation: spin 4s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  .cv-button:hover {
+    animation-play-state: paused;
+  }
+
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+
+  @media (max-width: 640px) {
+    .cv-button {
+      padding: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+    }
+  }
+`}</style>
+
+
+
+
           {/* Testimonials */}
           <section className="mt-16">
             <h3 className="text-2xl font-semibold mb-6 text-foreground">

@@ -1,9 +1,22 @@
+// Updated Resume Page with ShadCN Dropdown Filters
+// (Full TSX Code)
+
 "use client"
 
-import React from "react"
-import Sidebar from "@/components/landing-page/Sidebar";
-import Nav from "@/components/landing-page/Nav";
-import { IoBookOutline, IoBriefcaseOutline, IoBarChartOutline } from "react-icons/io5"
+import React, { useState } from "react"
+import Sidebar from "@/components/landing-page/Sidebar"
+import Nav from "@/components/landing-page/Nav"
+import { IoBookOutline, IoBriefcaseOutline } from "react-icons/io5"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Button } from "@/components/ui/button"
+import { ChevronDown } from "lucide-react"
 
 interface TimelineItem {
   title: string
@@ -15,6 +28,7 @@ interface TimelineItem {
 interface Skill {
   name: string
   value: number
+  category: "frontend" | "backend" | "tools" | "general"
 }
 
 const education: TimelineItem[] = [
@@ -31,13 +45,13 @@ const education: TimelineItem[] = [
       "There I learnt foundational courses and computer sciences fundamentals, in the institution chose my specialization in web-development involving front- and back-end technologies, user interface designs and content management systems front-and back-end.",
     starred: true,
   },
- {
-  title: "Verbum Networks lmt",
-  date: "2014 – 2015",
-  description:
-    "I learned Web Development here, focusing on foundational skills and practical application. I later returned to collect my CV and continue building my career prospects in the competitive tech field.",
-  starred: true,
-},
+  {
+    title: "Verbum Networks lmt",
+    date: "2014 – 2015",
+    description:
+      "I learned Web Development here, focusing on foundational skills and practical application. I later returned to collect my CV and continue building my career prospects in the competitive tech field.",
+    starred: true,
+  },
 ]
 
 const experience: TimelineItem[] = [
@@ -63,15 +77,48 @@ const experience: TimelineItem[] = [
   },
 ]
 
+// 🔥 Updated Skill Stack With Categories
 const skills: Skill[] = [
-  { name: "Forex Trading", value: 35 },
-  { name: "Reply Guy", value: 60 },
-  { name: "Web Design", value: 80 },
-  { name: "Web Development", value: 85 },
-  { name: "Airdrop Specialist", value: 100 },
+    // Frontend skills // 
+  { name: "JavaScript", value: 80, category: "frontend" },
+  { name: "TypeScript", value: 80, category: "frontend" },
+  { name: "ShadCN UI", value: 85, category: "frontend" },
+  { name: "React.js", value: 90, category: "frontend" },
+  { name: "Next.js", value: 95, category: "frontend" },
+  { name: "CSS", value: 100, category: "frontend" },
+  { name: "HTML", value: 100, category: "frontend" },
+  { name: "Bootstrap", value: 100, category: "frontend" },
+  { name: "Tailwind CSS", value: 100, category: "frontend" },
+
+  // Backend skills // 
+  { name: "MySQL", value: 70, category: "backend" },
+  { name: "Directus (Headless CMS)", value: 80, category: "backend" },
+  { name: "REST APIs", value: 90, category: "backend" },
+  { name: "Node EJS", value: 100, category: "backend" },
+  { name: "Node JS", value: 100, category: "backend" },
+  { name: "Express", value: 100, category: "backend" },
+  { name: "MongoDB", value: 100, category: "backend" },
+
+  // Dev tool skills // 
+  { name: "Docker", value: 70, category: "tools" },
+  { name: "Postman", value: 80, category: "tools" },
+  { name: "Git & GitHub", value: 90, category: "tools" },
+  { name: "VS Code", value: 100, category: "tools" },
+  { name: "Render Deployment", value: 100, category: "tools" },
+  { name: "Vercel Deployment", value: 100, category: "tools" },
+
+  // General skills // 
+  { name: "Web Design", value: 85, category: "general" },
+  { name: "Reply Guy", value: 90, category: "general" },
+  { name: "Web Development", value: 100, category: "general" },
 ]
 
 export default function ResumePage() {
+  const [filter, setFilter] = useState<string>("all")
+
+  const filteredSkills =
+    filter === "all" ? skills : skills.filter((s) => s.category === filter)
+
   return (
     <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-40 flex flex-col md:flex-row gap-6">
       {/* Sidebar */}
@@ -81,16 +128,14 @@ export default function ResumePage() {
 
       {/* Main Content */}
       <section className="flex-1 bg-card border border-border rounded-3xl p-4 md:p-10 shadow-lg overflow-y-auto mb-25 sm:mb-0 transition-colors duration-300">
-        {/* Navigation */}
         <Nav />
 
-        {/* Resume Header */}
         <header className="mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-2">Resume</h2>
           <div className="h-[3px] w-20 bg-primary rounded-full"></div>
         </header>
 
-        {/* Education Section */}
+        {/* Education */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-primary text-primary-foreground rounded-lg font-bold">
@@ -113,7 +158,7 @@ export default function ResumePage() {
           </ol>
         </section>
 
-        {/* Experience Section */}
+        {/* Experience */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-primary text-primary-foreground rounded-lg font-bold">
@@ -138,12 +183,33 @@ export default function ResumePage() {
 
         {/* Skills Section */}
         <section className="p-5 sm:p-6 bg-muted border border-border rounded-2xl shadow-md transition-colors duration-300">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center justify-between mb-6">
             <h3 className="text-2xl font-semibold text-foreground">My Skills</h3>
+
+            {/* 🔥 Filter Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" className="flex items-center gap-2">
+                  Filter: {filter === "all" ? "All" : filter}
+                  <ChevronDown className="w-4 h-4" />
+                </Button>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent align="end" className="bg-card border border-border text-foreground">
+                <DropdownMenuLabel>Filter Skills</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+
+                <DropdownMenuItem onClick={() => setFilter("all")}>All</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setFilter("frontend")}>Frontend</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setFilter("backend")}>Backend</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setFilter("tools")}>Dev Tools</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setFilter("general")}>General Experience</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           <ul className="space-y-5">
-            {skills.map((skill) => (
+            {filteredSkills.map((skill) => (
               <li key={skill.name}>
                 <div className="flex justify-between items-center mb-2">
                   <h5 className="text-sm sm:text-lg font-medium text-foreground">{skill.name}</h5>

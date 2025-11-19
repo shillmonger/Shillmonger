@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaWhatsapp,
   FaInstagram,
-  FaGlobe,
+  FaGithub,
 } from "react-icons/fa"
 import { MdEmail, MdPhoneIphone, MdCalendarToday, MdLocationOn } from "react-icons/md"
 import { SiTiktok } from "react-icons/si"
@@ -25,7 +25,7 @@ export default function Sidebar() {
   const images = [
     "https://i.postimg.cc/vTcfmkDh/shillmong-png.png",
     "https://i.postimg.cc/pLTWkRD3/shillmonger-2.png",
-    "https://i.postimg.cc/mkLfDyVz/shillmonger-3.png",
+    // "https://i.postimg.cc/mkLfDyVz/shillmonger-3.png",
   ]
 
   // ✅ Always call hooks before any conditional returns
@@ -158,41 +158,45 @@ export default function Sidebar() {
             <div className="w-full border-t border-border my-6"></div>
 
             {/* Social Links */}
-            <ul className="flex justify-center gap-5 text-xl text-foreground transition-colors duration-300">
-              {[
-                {
-                  href: "https://www.facebook.com/profile.php?id=100074008546049",
-                  icon: <FaFacebook />,
-                },
-                {
-                  href: "https://x.com/shillmonger0?t=yMkjGvcK9ujwCdubEJKNBQ&s=09",
-                  icon: <FaTwitter />,
-                },
-                {
-                  href: "https://wa.me/2348059268860?text=Hello%20there!",
-                  icon: <FaWhatsapp />,
-                },
-                {
-                  href: "https://www.instagram.com/codelab042?igsh=YzljYTk1ODg3Zg==",
-                  icon: <FaInstagram />,
-                },
-                {
-                  href: "https://www.tiktok.com/@shillmonger0?lang=en",
-                  icon: <SiTiktok />,
-                },
-                { href: "https://www.yourwebsite.com", icon: <FaGlobe /> },
-              ].map((social, idx) => (
-                <li key={idx}>
-                  <Link
-                    href={social.href}
-                    target="_blank"
-                    className="hover:text-primary transition-colors duration-300"
-                  >
-                    {social.icon}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+<ul className="flex justify-center gap-5 text-xl text-foreground transition-colors duration-300">
+  {[
+    // {
+    //   href: "https://www.facebook.com/profile.php?id=100074008546049",
+    //   icon: <FaFacebook />,
+    // },
+    {
+      href: "https://x.com/shillmonger0?t=yMkjGvcK9ujwCdubEJKNBQ&s=09",
+      icon: <FaTwitter />,
+    },
+    {
+      href: "https://wa.me/2348059268860?text=Hello%20there!",
+      icon: <FaWhatsapp />,
+    },
+    { 
+      href: "https://github.com/shillmonger", 
+      icon: <FaGithub /> 
+    },
+    {
+      href: "https://www.instagram.com/shillmonger0?igsh=MWQ4ZTQ2cTA0OW5vZQ==",
+      icon: <FaInstagram />,
+    },
+    {
+      href: "https://www.tiktok.com/@shillmonger0?lang=en",
+      icon: <SiTiktok />,
+    },
+  ].map((social, idx) => (
+    <li key={idx}>
+      <Link
+        href={social.href}
+        target="_blank"
+        className="hover:text-primary transition-colors duration-300"
+      >
+        {social.icon}
+      </Link>
+    </li>
+  ))}
+</ul>
+
           </div>
         </>
       )}
