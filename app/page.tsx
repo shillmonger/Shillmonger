@@ -133,8 +133,7 @@ export default function HomePage() {
 
 
 {/* View / Download CV Buttons */}
-<div className="mt-12 flex justify-between items-center flex-wrap gap-4">
-  {/* View */}
+{/* <div className="mt-12 flex justify-between items-center flex-wrap gap-4">
   <a
     href="https://small-bird-396.linkyhost.com"
     target="_blank"
@@ -144,7 +143,6 @@ export default function HomePage() {
     View My CV
   </a>
 
-  {/* Download */}
   <a
     href="https://small-bird-396.linkyhost.com"
     download="My-CV.pdf"
@@ -210,7 +208,7 @@ export default function HomePage() {
       font-size: 0.9rem;
     }
   }
-`}</style>
+`}</style> */}
 
 
 

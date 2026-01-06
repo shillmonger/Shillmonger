@@ -39,12 +39,12 @@ const projects: Project[] = [
       "A secure, high-performance backend server setup designed for decentralized applications. Optimized for scalability, speed, and seamless API management.",
   },
   {
-    title: "Investmentz",
+    title: "Printer FX",
     category: "Web Application",
-    image: "https://i.postimg.cc/y6DdDgcr/Screenshot-2025-11-05-165430.jpg",
-    link: "https://regalinvestmentz.com",
+    image: "https://i.postimg.cc/Zn1RxDYS/Screenshot-2026-01-04-144821.jpg",
+    link: "https://printer-fx.vercel.app/",
     description:
-      "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
+      "A sleek website built to help an FX mentor establish a strong online presence and attract students through clear messaging and intuitive design.",
   },
   {
     title: "Moon Chad",
@@ -54,6 +54,14 @@ const projects: Project[] = [
     description:
       "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
   },
+    {
+      title: "Investmentz",
+      category: "Web Application",
+      image: "https://i.postimg.cc/y6DdDgcr/Screenshot-2025-11-05-165430.jpg",
+      link: "https://regalinvestmentz.com",
+      description:
+        "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
+    },
   {
     title: "Dynamiqerra",
     category: "Web Development",
@@ -114,7 +122,7 @@ const projects: Project[] = [
   {
     title: "Boost Media",
     category: "Web Development",
-    image: "https://i.postimg.cc/9MWdVhZf/four-smm-onrender-com.png",
+    image: "https://i.postimg.cc/qM5YjHdG/four-smm-onrender-com.png",
     link: "https://four-smm.onrender.com/",
     description:
       "A marketing automation platform empowering brands to grow their audience. Offers social scheduling, analytics, and campaign management tools.",
