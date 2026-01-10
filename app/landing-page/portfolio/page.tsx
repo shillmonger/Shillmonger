@@ -23,6 +23,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+  "title": "CRIMINOLOGY",
+  "category": "Web Application",
+  "image": "https://i.postimg.cc/tCjDgN06/Screenshot-2026-01-10-131302-crop-2026-01-10-13-23-44.jpg",
+  "link": "https://criminology.vercel.app/",
+  "description": "A modern library web application designed to provide easy access to curated content. Features include intuitive navigation, clean design, and seamless browsing, making it simple for users to discover and engage with resources."
+},
+  {
     title: "Melons",
     category: "Meme Project",
     image: "https://i.postimg.cc/RZTjTdw4/Screenshot-2025-11-05-173047.jpg",
@@ -37,14 +44,6 @@ const projects: Project[] = [
     link: "https://de-mcp-server.onrender.com",
     description:
       "A secure, high-performance backend server setup designed for decentralized applications. Optimized for scalability, speed, and seamless API management.",
-  },
-  {
-    title: "Printer FX",
-    category: "Web Application",
-    image: "https://i.postimg.cc/Zn1RxDYS/Screenshot-2026-01-04-144821.jpg",
-    link: "https://printer-fx.vercel.app/",
-    description:
-      "A sleek website built to help an FX mentor establish a strong online presence and attract students through clear messaging and intuitive design.",
   },
   {
     title: "Moon Chad",
