@@ -33,15 +33,15 @@ const projects: Project[] = [
     title: "Melons",
     category: "Meme Project",
     image: "https://i.postimg.cc/RZTjTdw4/Screenshot-2025-11-05-173047.jpg",
-    link: "https://melons.onrender.com",
+    link: "https://melons-opal.vercel.app/",
     description:
       "A meme-sharing community where creativity meets humor. Users can create, post, and explore the funniest trends of the day with ease and style.",
   },
   {
-    title: "MPC Server",
+    title: "MCP Server",
     category: "Web Development",
     image: "https://i.postimg.cc/Y218g962/Screenshot-2025-11-05-173007.jpg",
-    link: "https://de-mcp-server.onrender.com",
+    link: "https://mcp-server-seven-tau.vercel.app/",
     description:
       "A secure, high-performance backend server setup designed for decentralized applications. Optimized for scalability, speed, and seamless API management.",
   },
@@ -49,7 +49,7 @@ const projects: Project[] = [
     title: "Moon Chad",
     category: "Meme Project",
     image: "https://i.postimg.cc/tT6sXpJg/Screenshot-2025-11-06-153321.jpg",
-    link: "moonchad.onrender.com",
+    link: "https://moon-chad.vercel.app/",
     description:
       "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
   },
@@ -70,10 +70,10 @@ const projects: Project[] = [
       "A dynamic digital agency crafting fast, reliable, and scalable web solutions. Focused on performance, responsive design, and next-gen user experiences.",
   },
   {
-    title: "Catooony",
+    title: "Catoony",
     category: "Meme Project",
     image: "https://i.postimg.cc/v8gTSgqy/Screenshot-2025-11-05-173723.jpg",
-    link: "https://catooony.onrender.com/",
+    link: "https://catoony.vercel.app/",
     description:
       "A cartoon-style meme generator built for fun and expression. Users can create animated memes in seconds with vibrant visuals and humor-driven tools.",
   },
@@ -98,17 +98,9 @@ const projects: Project[] = [
     title: "Troll Meme",
     category: "Meme Project",
     image: "https://i.postimg.cc/jqc8D8S9/Screenshot-2025-04-25-222845.jpg",
-    link: "https://troll0.onrender.com",
+    link: "https://troll-rouge.vercel.app/",
     description:
       "A classic meme platform dedicated to the golden era of internet humor. Create, remix, and share troll memes with an intuitive and fun UI.",
-  },
-  {
-    title: "Viral Vault",
-    category: "Web Development",
-    image: "https://i.postimg.cc/fbnJxw76/Screenshot-2025-11-05-172913.jpg",
-    link: "https://viralvault.onrender.com",
-    description:
-      "A viral content hub built for scalability and engagement. Optimized for meme creators, marketers, and social brands seeking rapid reach.",
   },
   {
     title: "Task Kash",
@@ -119,18 +111,10 @@ const projects: Project[] = [
       "A platform designed to connect users with large-scale social media projects (e.g., promotional campaigns, engagement drives). Users can perform specific tasks and earn money.",
   },
   {
-    title: "Boost Media",
-    category: "Web Development",
-    image: "https://i.postimg.cc/qM5YjHdG/four-smm-onrender-com.png",
-    link: "https://four-smm.onrender.com/",
-    description:
-      "A marketing automation platform empowering brands to grow their audience. Offers social scheduling, analytics, and campaign management tools.",
-  },
-  {
     title: "BTC Desider",
     category: "Meme Project",
     image: "https://i.postimg.cc/2SScFDGH/Screenshot-2025-11-05-171443.jpg",
-    link: "https://sib-btc.onrender.com",
+    link: "https://btc-decider.vercel.app/",
     description:
       "A crypto-themed meme generator where blockchain meets banter. Perfect for traders who like humor with their market charts.",
   },
@@ -138,15 +122,15 @@ const projects: Project[] = [
     title: "Gods Eye",
     category: "Web Development",
     image: "https://i.postimg.cc/SK8004M7/Screenshot-2025-11-05-170556.jpg",
-    link: "https://gods-eye-0.onrender.com",
+    link: "https://gods-eye-mu.vercel.app/",
     description:
       "Platform dedicated to ethical cybersecurity training. Users can learn and practice the methods used to build phishing websites and generate fake receipts, gaining critical knowledge for understanding, identifying.",
   },
   {
-    title: "Gift Castle",
+    title: "Gift Card wave",
     category: "Web Development",
     image: "https://i.postimg.cc/pTYWHNxq/gift-castle-onrender-com-2.png",
-    link: "https://gift-castle.onrender.com/",
+    link: "https://gift-card-wave.vercel.app/",
     description:
       "A secure and user-friendly marketplace for buying and selling gift cards. The platform facilitates fast, reliable transactions, allowing users to instantly exchange unwanted gift cards for cash.",
   },
@@ -162,7 +146,7 @@ const projects: Project[] = [
     title: "Wizard Meme",
     category: "Meme Project",
     image: "https://i.postimg.cc/bwkktJRJ/wizard0-onrender-com-1.png",
-    link: "https://wizard0.onrender.com/",
+    link: "https://wizard-beryl-nine.vercel.app/",
     description:
       "A fantasy-inspired meme creation portal. Users can summon wizard-themed humor and share spellbinding content across the web.",
   },
@@ -170,7 +154,7 @@ const projects: Project[] = [
     title: "Library",
     category: "Web Application",
     image: "https://i.postimg.cc/MTrLFgby/Screenshot-2025-11-07-072746.jpg",
-    link: "https://library-ukj1.onrender.com/",
+    link: "https://criminology-and-security-library.onrender.com/",
     description:
       "This platform allows people to read important books, view helpful screenshots and PDFs, and watch instructional videos, serving as a comprehensive resource for knowledge and learning.",
   },
