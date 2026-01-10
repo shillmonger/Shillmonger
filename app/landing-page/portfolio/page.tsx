@@ -117,7 +117,14 @@ const projects: Project[] = [
     link: "https://btc-decider.vercel.app/",
     description:
       "A crypto-themed meme generator where blockchain meets banter. Perfect for traders who like humor with their market charts.",
-  },
+  },{
+  title: "NFT SWAP",
+  category: "Web Development",
+  image: "https://i.postimg.cc/13KTG5hr/Screenshot-2026-01-10-145519.jpg",
+  link: "https://nft-swap-sage.vercel.app/",
+  description:
+    "An NFT swapping platform where users can trade, exchange, and manage their NFTs seamlessly. Connect wallets, discover unique assets, and swap NFTs securely on the blockchain.",
+},
   {
     title: "Gods Eye",
     category: "Web Development",
@@ -138,7 +145,7 @@ const projects: Project[] = [
     title: "Trust Loan",
     category: "Web Application",
     image: "https://i.postimg.cc/hGk98C79/Screenshot-2025-11-06-154256.jpg",
-    link: "https://trustloaneth.onrender.com/",
+    link: "https://trustloaneth.com/",
     description:
       "A Decentralized Finance (DeFi) platform built to provide short-term crypto loans specifically tailored for active traders. It allows users to borrow digital assets, enabling them to leverage their trading positions.",
   },
@@ -150,6 +157,14 @@ const projects: Project[] = [
     description:
       "A fantasy-inspired meme creation portal. Users can summon wizard-themed humor and share spellbinding content across the web.",
   },
+  {
+  title: "ASTRO TRADE",
+  category: "Web Development",
+  image: "https://i.postimg.cc/wTk8VkD7/Screenshot-2026-01-10-150327.jpg",
+  link: "https://astro-trade-iota.vercel.app/",
+  description:
+    "A platform that connects clients with professional traders who manage trades on their behalf. Users can securely hire experienced traders, track trading performance, and let experts handle buying and selling efficiently.",
+},
   {
     title: "Library",
     category: "Web Application",
