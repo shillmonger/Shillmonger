@@ -23,12 +23,14 @@ interface Project {
 
 const projects: Project[] = [
   {
-  "title": "CRIMINOLOGY",
-  "category": "Web Application",
-  "image": "https://i.postimg.cc/tCjDgN06/Screenshot-2026-01-10-131302-crop-2026-01-10-13-23-44.jpg",
-  "link": "https://criminology.vercel.app/",
-  "description": "A modern library web application designed to provide easy access to curated content. Features include intuitive navigation, clean design, and seamless browsing, making it simple for users to discover and engage with resources."
-},
+    title: "CRIMINOLOGY",
+    category: "Web Application",
+    image:
+      "https://i.postimg.cc/tCjDgN06/Screenshot-2026-01-10-131302-crop-2026-01-10-13-23-44.jpg",
+    link: "https://criminology.vercel.app/",
+    description:
+      "A modern library web application designed to provide easy access to curated content. Features include intuitive navigation, clean design, and seamless browsing, making it simple for users to discover and engage with resources.",
+  },
   {
     title: "Melons",
     category: "Meme Project",
@@ -53,14 +55,14 @@ const projects: Project[] = [
     description:
       "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
   },
-    {
-      title: "Investmentz",
-      category: "Web Application",
-      image: "https://i.postimg.cc/y6DdDgcr/Screenshot-2025-11-05-165430.jpg",
-      link: "https://regalinvestmentz.com",
-      description:
-        "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
-    },
+  {
+    title: "Investmentz",
+    category: "Web Application",
+    image: "https://i.postimg.cc/y6DdDgcr/Screenshot-2025-11-05-165430.jpg",
+    link: "https://regalinvestmentz.com",
+    description:
+      "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
+  },
   {
     title: "Dynamiqerra",
     category: "Web Development",
@@ -117,14 +119,15 @@ const projects: Project[] = [
     link: "https://btc-decider.vercel.app/",
     description:
       "A crypto-themed meme generator where blockchain meets banter. Perfect for traders who like humor with their market charts.",
-  },{
-  title: "NFT SWAP",
-  category: "Web Development",
-  image: "https://i.postimg.cc/13KTG5hr/Screenshot-2026-01-10-145519.jpg",
-  link: "https://nft-swap-sage.vercel.app/",
-  description:
-    "An NFT swapping platform where users can trade, exchange, and manage their NFTs seamlessly. Connect wallets, discover unique assets, and swap NFTs securely on the blockchain.",
-},
+  },
+  {
+    title: "NFT SWAP",
+    category: "Web Development",
+    image: "https://i.postimg.cc/13KTG5hr/Screenshot-2026-01-10-145519.jpg",
+    link: "https://nft-swap-sage.vercel.app/",
+    description:
+      "An NFT swapping platform where users can trade, exchange, and manage their NFTs seamlessly. Connect wallets, discover unique assets, and swap NFTs securely on the blockchain.",
+  },
   {
     title: "Gods Eye",
     category: "Web Development",
@@ -158,13 +161,13 @@ const projects: Project[] = [
       "A fantasy-inspired meme creation portal. Users can summon wizard-themed humor and share spellbinding content across the web.",
   },
   {
-  title: "ASTRO TRADE",
-  category: "Web Development",
-  image: "https://i.postimg.cc/wTk8VkD7/Screenshot-2026-01-10-150327.jpg",
-  link: "https://astro-trade-iota.vercel.app/",
-  description:
-    "A platform that connects clients with professional traders who manage trades on their behalf. Users can securely hire experienced traders, track trading performance, and let experts handle buying and selling efficiently.",
-},
+    title: "ASTRO TRADE",
+    category: "Web Development",
+    image: "https://i.postimg.cc/wTk8VkD7/Screenshot-2026-01-10-150327.jpg",
+    link: "https://astro-trade-iota.vercel.app/",
+    description:
+      "A platform that connects clients with professional traders who manage trades on their behalf. Users can securely hire experienced traders, track trading performance, and let experts handle buying and selling efficiently.",
+  },
   {
     title: "Library",
     category: "Web Application",
