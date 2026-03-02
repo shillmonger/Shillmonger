@@ -23,13 +23,13 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "CRIMINOLOGY",
+    title: "GINGOMART",
     category: "Web Application",
     image:
-      "https://i.postimg.cc/tCjDgN06/Screenshot-2026-01-10-131302-crop-2026-01-10-13-23-44.jpg",
-    link: "https://criminology.vercel.app/",
+      "https://i.postimg.cc/ydHhW2Wq/Screenshot-2026-03-02-100833.jpg",
+    link: "https://shopdotfun.vercel.app/",
     description:
-      "A modern library web application designed to provide easy access to curated content. Features include intuitive navigation, clean design, and seamless browsing, making it simple for users to discover and engage with resources.",
+      "Gingo Mart is a modern marketplace where people can buy and sell any digital product and get paid securely in cryptocurrency.",
   },
   {
     title: "Melons",
@@ -38,6 +38,15 @@ const projects: Project[] = [
     link: "https://melons-opal.vercel.app/",
     description:
       "A meme-sharing community where creativity meets humor. Users can create, post, and explore the funniest trends of the day with ease and style.",
+  },
+  {
+    title: "CRIMINOLOGY",
+    category: "Web Application",
+    image:
+      "https://i.postimg.cc/tCjDgN06/Screenshot-2026-01-10-131302-crop-2026-01-10-13-23-44.jpg",
+    link: "https://criminology.vercel.app/",
+    description:
+      "A modern library web application designed to provide easy access to curated content. Features include intuitive navigation, clean design, and seamless browsing, making it simple for users to discover and engage with resources.",
   },
   {
     title: "MCP Server",
@@ -167,14 +176,6 @@ const projects: Project[] = [
     link: "https://astro-trade-iota.vercel.app/",
     description:
       "A platform that connects clients with professional traders who manage trades on their behalf. Users can securely hire experienced traders, track trading performance, and let experts handle buying and selling efficiently.",
-  },
-  {
-    title: "Library",
-    category: "Web Application",
-    image: "https://i.postimg.cc/MTrLFgby/Screenshot-2025-11-07-072746.jpg",
-    link: "https://criminology-and-security-library.onrender.com/",
-    description:
-      "This platform allows people to read important books, view helpful screenshots and PDFs, and watch instructional videos, serving as a comprehensive resource for knowledge and learning.",
   },
 ];
 

@@ -110,6 +110,7 @@ const skills: Skill[] = [
   // General skills // 
   { name: "Web Design", value: 85, category: "general" },
   { name: "Reply Guy", value: 90, category: "general" },
+  { name: "Forex Trading", value: 40, category: "general" },
   { name: "Web Development", value: 100, category: "general" },
 ]
 
