@@ -28,7 +28,7 @@ interface TimelineItem {
 interface Skill {
   name: string
   value: number
-  category: "frontend" | "backend" | "tools" | "general"
+  category: "frontend" | "backend" | "tools" | "Database"
 }
 
 const education: TimelineItem[] = [
@@ -89,15 +89,16 @@ const skills: Skill[] = [
   { name: "HTML", value: 100, category: "frontend" },
   { name: "Bootstrap", value: 100, category: "frontend" },
   { name: "Tailwind CSS", value: 100, category: "frontend" },
+  { name: "React Native", value: 100, category: "frontend" },
 
   // Backend skills // 
   { name: "MySQL", value: 70, category: "backend" },
   { name: "Directus (Headless CMS)", value: 80, category: "backend" },
   { name: "REST APIs", value: 90, category: "backend" },
   { name: "Node EJS", value: 100, category: "backend" },
+  { name: ".NET", value: 100, category: "backend" },
   { name: "Node JS", value: 100, category: "backend" },
   { name: "Express", value: 100, category: "backend" },
-  { name: "MongoDB", value: 100, category: "backend" },
 
   // Dev tool skills // 
   { name: "Docker", value: 70, category: "tools" },
@@ -107,11 +108,10 @@ const skills: Skill[] = [
   { name: "Render Deployment", value: 100, category: "tools" },
   { name: "Vercel Deployment", value: 100, category: "tools" },
 
-  // General skills // 
-  { name: "Web Design", value: 85, category: "general" },
-  { name: "Reply Guy", value: 90, category: "general" },
-  { name: "Forex Trading", value: 40, category: "general" },
-  { name: "Web Development", value: 100, category: "general" },
+  // Database skills // 
+  { name: "MongoDB", value: 85, category: "Database" },
+  { name: "PostgreSQL", value: 90, category: "Database" },
+  { name: "MySQL", value: 70, category: "Database" },
 ]
 
 export default function ResumePage() {
