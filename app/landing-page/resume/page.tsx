@@ -80,38 +80,38 @@ const experience: TimelineItem[] = [
 // 🔥 Updated Skill Stack With Categories
 const skills: Skill[] = [
     // Frontend skills // 
-  { name: "JavaScript", value: 80, category: "frontend" },
-  { name: "TypeScript", value: 80, category: "frontend" },
-  { name: "ShadCN UI", value: 85, category: "frontend" },
-  { name: "React.js", value: 90, category: "frontend" },
-  { name: "Next.js", value: 95, category: "frontend" },
-  { name: "CSS", value: 100, category: "frontend" },
-  { name: "HTML", value: 100, category: "frontend" },
-  { name: "Bootstrap", value: 100, category: "frontend" },
-  { name: "Tailwind CSS", value: 100, category: "frontend" },
-  { name: "React Native", value: 100, category: "frontend" },
+    { name: "CSS", value: 100, category: "frontend" },
+    { name: "HTML", value: 100, category: "frontend" },
+    { name: "React.js", value: 90, category: "frontend" },
+    { name: "Next.js", value: 95, category: "frontend" },
+    { name: "ShadCN UI", value: 85, category: "frontend" },
+    { name: "Bootstrap", value: 100, category: "frontend" },
+    { name: "JavaScript", value: 80, category: "frontend" },
+    { name: "TypeScript", value: 80, category: "frontend" },
+    { name: "Tailwind CSS", value: 100, category: "frontend" },
+    { name: "React Native", value: 100, category: "frontend" },
 
   // Backend skills // 
   { name: "MySQL", value: 70, category: "backend" },
-  { name: "Directus (Headless CMS)", value: 80, category: "backend" },
   { name: "REST APIs", value: 90, category: "backend" },
   { name: "Node EJS", value: 100, category: "backend" },
   { name: ".NET", value: 100, category: "backend" },
   { name: "Node JS", value: 100, category: "backend" },
   { name: "Express", value: 100, category: "backend" },
-
+  
   // Dev tool skills // 
   { name: "Docker", value: 70, category: "tools" },
   { name: "Postman", value: 80, category: "tools" },
-  { name: "Git & GitHub", value: 90, category: "tools" },
   { name: "VS Code", value: 100, category: "tools" },
+  { name: "Git & GitHub", value: 90, category: "tools" },
   { name: "Render Deployment", value: 100, category: "tools" },
   { name: "Vercel Deployment", value: 100, category: "tools" },
+  { name: "Directus (Headless CMS)", value: 80, category: "tools" },
 
   // Database skills // 
+  { name: "MySQL", value: 70, category: "Database" },
   { name: "MongoDB", value: 85, category: "Database" },
   { name: "PostgreSQL", value: 90, category: "Database" },
-  { name: "MySQL", value: 70, category: "Database" },
 ]
 
 export default function ResumePage() {
