@@ -33,49 +33,49 @@ interface Skill {
 
 const education: TimelineItem[] = [
   {
-    title: "University",
+    title: "Computer Science Studies",
     date: "2013 – 2014",
     description:
-      "There I learnt a wide range of topics that are essential to understanding both the theory and practical aspects of computing. This involved programming fundamentals, computer architecture, operating systems, databases, software engineering, problem solving collaboration and communication soft skills.",
+      "Studied core computer science concepts including programming fundamentals, computer architecture, operating systems, databases, and software engineering. Developed problem-solving skills and gained experience working on collaborative technical projects.",
   },
   {
-    title: "Art And Design",
+    title: "Art & Design (Digital Focus)",
     date: "2015 – 2016",
     description:
-      "There I learnt foundational courses and computer sciences fundamentals, in the institution chose my specialization in web-development involving front- and back-end technologies, user interface designs and content management systems front-and back-end.",
+      "Learned visual design principles and user interface design with a focus on digital products. Explored front-end development concepts, responsive layouts, and the relationship between design, usability, and modern web technologies.",
     starred: true,
   },
   {
-    title: "Verbum Networks lmt",
+    title: "Web Development Training – Verbum Networks Ltd",
     date: "2014 – 2015",
     description:
-      "I learned Web Development here, focusing on foundational skills and practical application. I later returned to collect my CV and continue building my career prospects in the competitive tech field.",
+      "Completed practical training in web development, learning HTML, CSS, JavaScript, and foundational backend concepts. Built early web projects while gaining hands-on experience with real development workflows.",
     starred: true,
   },
-]
+];
 
 const experience: TimelineItem[] = [
   {
-    title: "Web Development",
+    title: "Full-Stack Web Development",
     date: "2018 – Present",
     description:
-      "Skilled in bringing technical and creative disciplines, ensuring project feasibility while maintaining a strong focus on user experience and aesthetics.",
+      "Building responsive and scalable web applications using modern technologies such as JavaScript, React, Node.js, and REST APIs. Focused on clean architecture, performance optimization, and delivering user-friendly digital experiences.",
   },
   {
-    title: "Forex",
+    title: "Technical Research & Algorithmic Trading",
     date: "2019 – Present",
     description:
-      "I analyze and develop strategic trading concepts that align with market goals, overseeing the execution of trading strategies and managing timelines and budgets for investment portfolios.",
+      "Applying data analysis and technical indicators to study financial markets. Developing structured trading strategies and using analytical tools to evaluate market trends and risk management.",
     starred: true,
   },
   {
-    title: "Airdrop Specialist",
+    title: "Blockchain & Web3 Research",
     date: "2018 – Present",
     description:
-      "I organize and manage crypto airdrops, ensuring airdrop tokens eligibility and fair distribution. Additionally, I educate individuals on how to find, participate in, and maximize benefits from airdrops while avoiding scams.",
+      "Exploring blockchain ecosystems, token distribution models, and decentralized platforms. Educating communities on identifying legitimate crypto opportunities, participating in airdrops, and maintaining security in the Web3 space.",
     starred: true,
   },
-]
+];
 
 // 🔥 Updated Skill Stack With Categories
 const skills: Skill[] = [
