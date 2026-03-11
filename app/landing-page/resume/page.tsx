@@ -101,7 +101,7 @@ const skills: Skill[] = [
   
   // Dev tool skills // 
   { name: "Docker", value: 70, category: "tools" },
-  { name: "Postman", value: 80, category: "tools" },
+  { name: "Postman", value: 90, category: "tools" },
   { name: "VS Code", value: 100, category: "tools" },
   { name: "Git & GitHub", value: 90, category: "tools" },
   { name: "Render Deployment", value: 100, category: "tools" },
