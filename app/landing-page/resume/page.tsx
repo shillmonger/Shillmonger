@@ -89,13 +89,13 @@ const skills: Skill[] = [
     { name: "JavaScript", value: 80, category: "frontend" },
     { name: "TypeScript", value: 80, category: "frontend" },
     { name: "Tailwind CSS", value: 100, category: "frontend" },
-    { name: "React Native", value: 100, category: "frontend" },
+    { name: "React Native", value: 70, category: "frontend" },
 
   // Backend skills // 
   { name: "MySQL", value: 70, category: "backend" },
   { name: "REST APIs", value: 90, category: "backend" },
   { name: "Node EJS", value: 100, category: "backend" },
-  { name: ".NET", value: 100, category: "backend" },
+  { name: ".NET", value: 80, category: "backend" },
   { name: "Node JS", value: 100, category: "backend" },
   { name: "Express", value: 100, category: "backend" },
   
