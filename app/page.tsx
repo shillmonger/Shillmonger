@@ -112,8 +112,8 @@ export default function HomePage() {
                     <Image
                       src="https://i.postimg.cc/mZ00RwX7/icon-quote.png"
                       alt="icon"
-                      width={40}
-                      height={40}
+                      width={30}
+                      height={30}
                       className="flex-shrink-0"
                     />
                     <div>

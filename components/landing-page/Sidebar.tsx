@@ -23,9 +23,9 @@ export default function Sidebar() {
   const [currentImage, setCurrentImage] = useState(0)
 
   const images = [
+    "https://i.postimg.cc/P5pT79TP/shillmongerr.png",
     "https://i.postimg.cc/vTcfmkDh/shillmong-png.png",
     "https://i.postimg.cc/pLTWkRD3/shillmonger-2.png",
-    // "https://i.postimg.cc/mkLfDyVz/shillmonger-3.png",
   ]
 
   // ✅ Always call hooks before any conditional returns

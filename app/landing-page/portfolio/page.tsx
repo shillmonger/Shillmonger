@@ -23,6 +23,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "CETADEL ASSETS",
+    category: "Web Application",
+    image:
+      "https://i.postimg.cc/XJnghKKj/Cetadel.png",
+    link: "https://citadelassetsmanagement.com",
+    description:
+      "CETADEL ASSETS is a leading financial services company specializing in asset management and investment solutions.",
+  },
+  {
     title: "GINGOMART",
     category: "Web Application",
     image:
