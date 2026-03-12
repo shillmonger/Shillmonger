@@ -27,7 +27,7 @@ const projects: Project[] = [
     category: "Web Application",
     image:
       "https://i.postimg.cc/XJnghKKj/Cetadel.png",
-    link: "https://citadelassetsmanagement.com",
+    link: "citadel-assets.vercel.app",
     description:
       "CETADEL ASSETS is a leading financial services company specializing in asset management and investment solutions.",
   },
