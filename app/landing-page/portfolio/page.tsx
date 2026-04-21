@@ -23,6 +23,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Trust Wallet XP",
+    category: "BOT",
+    image:
+      "https://i.postimg.cc/N00x2ckC/Screenshot-2026-04-21-145246.jpg",
+    link: "https://t.me/trustwalletxp_bot",
+    description:
+      "Telegram bot for Trust Wallet XP, This bot helps users earn XP points by completing simple tasks. XP can unlock bonuses, features, and rewards inside the",
+  },
+  {
     title: "CETADEL ASSETS",
     category: "Web Application",
     image:
@@ -204,6 +213,7 @@ const PortfolioPage = () => {
     "Web Application",
     "Web Development",
     "Meme Project",
+    "BOT",
   ];
 
   const filteredProjects =
