@@ -23,10 +23,9 @@ export default function Sidebar() {
   const [currentImage, setCurrentImage] = useState(0)
 
   const images = [
-    "https://i.postimg.cc/7hknFpFf/shillmongerr-removebg-preview.png",
-    "https://i.postimg.cc/vTcfmkDh/shillmong-png.png",
-    "https://i.postimg.cc/4yPVrnbT/shillmongerr.png",
-    "https://i.postimg.cc/pLTWkRD3/shillmonger-2.png",
+    "https://i.postimg.cc/5tsvMfss/my-dp.png",
+    "https://i.postimg.cc/5tsvMfss/my-dp.png",
+    "https://i.postimg.cc/5tsvMfss/my-dp.png",
   ]
 
   // ✅ Always call hooks before any conditional returns
@@ -71,7 +70,7 @@ export default function Sidebar() {
               SHILLMONGER
             </h1>
             <p className="bg-muted px-4 py-1 mt-2 text-sm text-muted-foreground rounded-md">
-              Web Developer
+              Full Stack Developer
             </p>
           </div>
 

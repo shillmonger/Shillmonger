@@ -22,7 +22,7 @@ export default function Nav() {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="hidden md:flex justify-end">
+      <nav className="hidden md:flex justify-end  top-4 right-4 z-50">
         <div className="bg-muted border border-border rounded-2xl px-6 py-4 shadow-md inline-flex transition-colors duration-300">
           <ul className="flex flex-wrap gap-6 text-foreground transition-colors duration-300">
             {navItems.map(({ name, href }) => {

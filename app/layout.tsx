@@ -5,9 +5,6 @@ import { Providers } from "@/components/providers";
 export const metadata = {
   title: "shillmonger",
   description: "Let me make you a Website",
-  icons: {
-    icon: "https://i.postimg.cc/rytG8pg3/shillmonger.png",
-  },
 };
 
 export const viewport = {

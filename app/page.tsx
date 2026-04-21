@@ -130,88 +130,17 @@ export default function HomePage() {
             </ul>
           </section>
 
-
-
-{/* View / Download CV Buttons */}
-{/* <div className="mt-12 flex justify-between items-center flex-wrap gap-4">
-  <a
-    href="https://small-bird-396.linkyhost.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-8 py-4 rounded-3xl text-lg font-semibold cursor-pointer cv-button"
-  >
-    View My CV
-  </a>
-
-  <a
-    href="https://small-bird-396.linkyhost.com"
-    download="My-CV.pdf"
-    className="px-8 py-4 rounded-3xl text-lg font-semibold cursor-pointer cv-button"
-  >
-    Download CV
-  </a>
-</div>
-
-<style jsx>{`
-  .cv-button {
-    @apply inline-block relative;
-
-    background: var(--card);
-    color: var(--foreground);
-    border: 3px solid transparent;
-    border-radius: 1.5rem;
-
-    --border-angle: 0turn;
-
-    --main-bg: conic-gradient(
-      from var(--border-angle),
-      var(--card),
-      var(--card) 5%,
-      var(--card) 60%,
-      var(--card) 95%
-    );
-
-    --gradient-border: conic-gradient(
-      from var(--border-angle),
-      transparent 25%,
-      var(--primary),
-      var(--primary),
-      transparent
-    );
-
-    background:
-      var(--main-bg) padding-box,
-      var(--gradient-border) border-box,
-      var(--main-bg) border-box;
-    animation: spin 4s linear infinite;
-  }
-
-  @keyframes spin {
-    to {
-      --border-angle: 1turn;
-    }
-  }
-
-  .cv-button:hover {
-    animation-play-state: paused;
-  }
-
-  @property --border-angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0turn;
-  }
-
-  @media (max-width: 640px) {
-    .cv-button {
-      padding: 0.6rem 1.4rem;
-      font-size: 0.9rem;
-    }
-  }
-`}</style> */}
-
-
-
+          {/* View / Download CV Buttons */}
+          <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a
+              href="https://still-pond-693.linkyhost.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-3 rounded-xl text-lg font-semibold cursor-pointer text-center bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
+            >
+              View My Resume
+            </a>
+          </div>
 
           {/* Testimonials */}
           <section className="mt-16">
@@ -252,13 +181,12 @@ export default function HomePage() {
             </div>
 
             {/* Progress Bar */}
-<div className="mt-2 h-[3px] w-full bg-border rounded-full overflow-hidden flex justify-center">
-  <div
-    id="scroll-progress-bar"
-    className="h-full bg-neutral-900 dark:bg-white rounded-full transition-all duration-300 ease-linear w-[0%]"
-  ></div>
-</div>
-
+            <div className="mt-2 h-[3px] w-full bg-border rounded-full overflow-hidden flex justify-center">
+              <div
+                id="scroll-progress-bar"
+                className="h-full bg-neutral-900 dark:bg-white rounded-full transition-all duration-300 ease-linear w-[0%]"
+              ></div>
+            </div>
           </section>
         </article>
       </section>
