@@ -29,7 +29,7 @@ const projects: Project[] = [
       "https://i.postimg.cc/DydDq71b/Screenshot-2026-04-21-150326.jpg",
     link: "https://t.me/trustwalletxp_bot",
     description:
-      "Telegram bot for Trust Wallet XP, This bot helps users earn XP points by completing simple tasks. XP can unlock bonuses, features, and rewards inside the",
+      "Telegram bot for Trust Wallet XP, This bot helps users earn XP points by completing simple tasks. XP can unlock bonuses, features, and rewards inside the BOT",
   },
   {
     title: "CETADEL ASSETS",
@@ -220,7 +220,7 @@ const PortfolioPage = () => {
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-40 flex flex-col md:flex-row gap-6">
+    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-30 flex flex-col md:flex-row gap-6">
       {/* Sidebar */}
       <aside>
         <Sidebar />
@@ -337,7 +337,7 @@ const PortfolioPage = () => {
           </span>
         </div>
 
-        <p className="text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
+        <p className="text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-4">
           {project.description}
         </p>
 

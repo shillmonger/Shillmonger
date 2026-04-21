@@ -44,7 +44,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background text-foreground p-3 md:py-10 md:px-40 flex flex-col md:flex-row gap-6 transition-colors duration-300">
+    <main className="min-h-screen bg-background text-foreground p-3 md:py-10 md:px-30 flex flex-col md:flex-row gap-6 transition-colors duration-300">
       {/* Sidebar */}
       <aside>
         <Sidebar />

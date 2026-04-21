@@ -88,116 +88,121 @@ export default function Sidebar() {
 
           {/* Contact + Social Section */}
           <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              showContacts ? "max-h-[2000px] mt-4" : "max-h-0 md:max-h-full"
-            } md:mt-0`}
+  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+    showContacts ? "max-h-[2000px] mt-4" : "max-h-0 md:max-h-full"
+  } md:mt-0`}
+>
+  {/* CONTACT CARDS */}
+  <ul className="space-y-3">
+    {[
+      {
+        icon: <MdEmail />,
+        label: "EMAIL",
+        value: (
+          <Link
+            href="mailto:shillmonger0@gmail.com"
+            className="text-sm text-primary hover:text-primary/80 transition-colors"
           >
-            {/* Contact List */}
-            <ul className="space-y-4 w-full">
-              {[
-                {
-                  icon: <MdEmail />,
-                  label: "EMAIL",
-                  value: (
-                    <Link
-                      href="mailto:shillmonger0@gmail.com"
-                      className="text-sm text-primary hover:text-primary/80 transition-colors"
-                    >
-                      shillmonger0@gmail.com
-                    </Link>
-                  ),
-                },
-                {
-                  icon: <MdPhoneIphone />,
-                  label: "PHONE",
-                  value: (
-                    <Link
-                      href="tel:+2348059268860"
-                      className="text-sm text-primary hover:text-primary/80 transition-colors"
-                    >
-                      +2348059268860
-                    </Link>
-                  ),
-                },
-                {
-                  icon: <MdCalendarToday />,
-                  label: "BIRTHDAY",
-                  value: (
-                    <time
-                      dateTime="2003-11-25"
-                      className="text-sm text-muted-foreground"
-                    >
-                      November 25, 2003
-                    </time>
-                  ),
-                },
-                {
-                  icon: <MdLocationOn />,
-                  label: "LOCATION",
-                  value: (
-                    <address className="not-italic text-sm text-muted-foreground">
-                      Enugu, Nigeria
-                    </address>
-                  ),
-                },
-              ].map((item, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-center space-x-3 bg-muted rounded-2xl px-3 py-3 shadow-md hover:bg-card transition-colors duration-300"
-                >
-                  <div className="text-primary text-lg">{item.icon}</div>
-                  <div>
-                    <p className="text-xs text-muted-foreground">{item.label}</p>
-                    {item.value}
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            {/* Separator */}
-            <div className="w-full border-t border-border my-6"></div>
-
-            {/* Social Links */}
-<ul className="flex justify-center gap-5 text-xl text-foreground transition-colors duration-300">
-  {[
-    // {
-    //   href: "https://www.facebook.com/profile.php?id=100074008546049",
-    //   icon: <FaFacebook />,
-    // },
-    {
-      href: "https://x.com/shillmonger0?t=yMkjGvcK9ujwCdubEJKNBQ&s=09",
-      icon: <FaTwitter />,
-    },
-    {
-      href: "https://wa.me/2348059268860?text=Hello%20there!",
-      icon: <FaWhatsapp />,
-    },
-    { 
-      href: "https://github.com/shillmonger", 
-      icon: <FaGithub /> 
-    },
-    {
-      href: "https://www.instagram.com/shillmonger0?igsh=MWQ4ZTQ2cTA0OW5vZQ==",
-      icon: <FaInstagram />,
-    },
-    {
-      href: "https://www.tiktok.com/@shillmonger0?lang=en",
-      icon: <SiTiktok />,
-    },
-  ].map((social, idx) => (
-    <li key={idx}>
-      <Link
-        href={social.href}
-        target="_blank"
-        className="hover:text-primary transition-colors duration-300"
+            shillmonger0@gmail.com
+          </Link>
+        ),
+      },
+      {
+        icon: <MdPhoneIphone />,
+        label: "PHONE",
+        value: (
+          <Link
+            href="tel:+2348059268860"
+            className="text-sm text-primary hover:text-primary/80 transition-colors"
+          >
+            +2348059268860
+          </Link>
+        ),
+      },
+      {
+        icon: <MdCalendarToday />,
+        label: "BIRTHDAY",
+        value: (
+          <time
+            dateTime="2003-11-25"
+            className="text-sm text-muted-foreground"
+          >
+            November 25, 2003
+          </time>
+        ),
+      },
+      {
+        icon: <MdLocationOn />,
+        label: "LOCATION",
+        value: (
+          <address className="not-italic text-sm text-muted-foreground">
+            Enugu, Nigeria
+          </address>
+        ),
+      },
+    ].map((item, idx) => (
+      <li
+        key={idx}
+        className="flex items-center gap-4 rounded-2xl px-4 py-4 bg-muted/60 border border-border/50 shadow-sm hover:shadow-md hover:bg-muted transition-all duration-300"
       >
-        {social.icon}
-      </Link>
-    </li>
-  ))}
-</ul>
+        {/* Icon bubble */}
+        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary text-lg shrink-0">
+          {item.icon}
+        </div>
 
-          </div>
+        {/* Content */}
+        <div className="flex flex-col leading-tight">
+          <p className="text-[11px] tracking-widest text-muted-foreground">
+            {item.label}
+          </p>
+          {item.value}
+        </div>
+      </li>
+    ))}
+  </ul>
+
+  {/* DIVIDER */}
+  <div className="w-full border-t border-border/60 my-6" />
+
+  {/* SOCIAL SECTION TITLE */}
+  <p className="text-center text-xs tracking-widest text-muted-foreground mb-3">
+    CONNECT WITH ME
+  </p>
+
+  {/* SOCIAL LINKS */}
+  <ul className="flex justify-center flex-wrap gap-4 text-xl text-foreground">
+    {[
+      // { href: "#", icon: <FaFacebook /> },
+      {
+        href: "https://x.com/shillmonger0?t=yMkjGvcK9ujwCdubEJKNBQ&s=09",
+        icon: <FaTwitter />,
+      },
+      {
+        href: "https://wa.me/2348059268860?text=Hello%20there!",
+        icon: <FaWhatsapp />,
+      },
+      { href: "https://github.com/shillmonger", icon: <FaGithub /> },
+      // {
+      //   href: "#",
+      //   icon: <FaInstagram />,
+      // },
+      {
+        href: "https://www.tiktok.com/@shillmonger0?lang=en",
+        icon: <SiTiktok />,
+      },
+    ].map((social, idx) => (
+      <li key={idx}>
+        <Link
+          href={social.href}
+          target="_blank"
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-muted/50 border border-border/50 hover:bg-primary/10 hover:text-primary transition-all duration-300"
+        >
+          {social.icon}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
         </>
       )}
     </aside>

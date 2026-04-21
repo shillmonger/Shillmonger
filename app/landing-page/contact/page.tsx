@@ -56,7 +56,7 @@ export default function ContactPage() {
   return (
     <main
       className="min-h-screen bg-background text-foreground 
-      p-4 md:py-10 md:px-40 flex flex-col md:flex-row gap-6 
+      p-4 md:py-10 md:px-30 flex flex-col md:flex-row gap-6 
       transition-colors duration-300"
     >
       {/* Sidebar */}

@@ -121,7 +121,7 @@ export default function ResumePage() {
     filter === "all" ? skills : skills.filter((s) => s.category === filter)
 
   return (
-    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-40 flex flex-col md:flex-row gap-6">
+    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-30 flex flex-col md:flex-row gap-6">
       {/* Sidebar */}
       <aside>
         <Sidebar />
