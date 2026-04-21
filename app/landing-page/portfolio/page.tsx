@@ -26,7 +26,7 @@ const projects: Project[] = [
     title: "Trust Wallet XP",
     category: "BOT",
     image:
-      "https://i.postimg.cc/N00x2ckC/Screenshot-2026-04-21-145246.jpg",
+      "https://i.postimg.cc/DydDq71b/Screenshot-2026-04-21-150326.jpg",
     link: "https://t.me/trustwalletxp_bot",
     description:
       "Telegram bot for Trust Wallet XP, This bot helps users earn XP points by completing simple tasks. XP can unlock bonuses, features, and rewards inside the",
@@ -337,7 +337,7 @@ const PortfolioPage = () => {
           </span>
         </div>
 
-        <p className="text-sm md:text-base text-muted-foreground leading-relaxed ">
+        <p className="text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3">
           {project.description}
         </p>
 
