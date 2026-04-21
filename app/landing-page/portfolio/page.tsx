@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Eye, ChevronDown } from "lucide-react";
+import { Eye, ChevronDown, Link } from "lucide-react";
 import Sidebar from "@/components/landing-page/Sidebar";
 import Nav from "@/components/landing-page/Nav";
 import { Button } from "@/components/ui/button";
@@ -32,6 +32,15 @@ const projects: Project[] = [
       "CETADEL ASSETS is a leading financial services company specializing in asset management and investment solutions.",
   },
   {
+    title: "PRINTER FX",
+    category: "Web Application",
+    image:
+      "https://i.postimg.cc/28R4wm2r/Screenshot-2026-04-21-135728.jpg",
+    link: "https://printer-fx.vercel.app/",
+    description:
+  "PRINTER FX is a forex mentorship platform designed to help traders master the markets through proven strategies, live sessions, and real-time trade insights.",
+  },
+  {
     title: "GINGOMART",
     category: "Web Application",
     image:
@@ -39,6 +48,14 @@ const projects: Project[] = [
     link: "https://shopdotfun.vercel.app/",
     description:
       "Gingo Mart is a modern marketplace where people can buy and sell any digital product and get paid securely in cryptocurrency.",
+  },
+  {
+    title: "Task Kash",
+    category: "Web Application",
+    image: "https://i.postimg.cc/xjKQXyZy/Screenshot-2026-04-21-134941.jpg",
+    link: "https://taskkash.xyz/",
+    description:
+      "A platform designed to connect users with large-scale social media projects (e.g., promotional campaigns, engagement drives). Users can perform specific tasks and earn money.",
   },
   {
     title: "Melons",
@@ -76,7 +93,7 @@ const projects: Project[] = [
   {
     title: "Investmentz",
     category: "Web Application",
-    image: "https://i.postimg.cc/y6DdDgcr/Screenshot-2025-11-05-165430.jpg",
+    image: "https://i.postimg.cc/cJM7Kzfj/Screenshot-2026-04-21-135409.jpg",
     link: "https://regalinvestmentz.com",
     description:
       "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
@@ -121,14 +138,6 @@ const projects: Project[] = [
     link: "https://troll-rouge.vercel.app/",
     description:
       "A classic meme platform dedicated to the golden era of internet humor. Create, remix, and share troll memes with an intuitive and fun UI.",
-  },
-  {
-    title: "Task Kash",
-    category: "Web Application",
-    image: "https://i.postimg.cc/FRpYBGBG/Screenshot-2025-11-06-151959.jpg",
-    link: "https://taskkash-project.onrender.com/",
-    description:
-      "A platform designed to connect users with large-scale social media projects (e.g., promotional campaigns, engagement drives). Users can perform specific tasks and earn money.",
   },
   {
     title: "BTC Desider",
@@ -273,42 +282,69 @@ const PortfolioPage = () => {
         </div>
 
         {/* Project Cards */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredProjects.map((project, index) => (
-            <a
-              key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden border border-border bg-muted rounded-2xl shadow-md"
-            >
-              <figure className="relative w-full h-52 md:h-56 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/30 dark:bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300">
-                  <Eye className="w-8 h-8 text-primary" />
-                </div>
-              </figure>
-              <div className="p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {project.category}
-                  </p>
-                </div>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-            </a>
-          ))}
-        </section>
+       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {filteredProjects.map((project, index) => (
+    <a
+      key={index}
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative overflow-hidden rounded-2xl border border-border bg-muted/40 backdrop-blur-xl  transition-all duration-500"
+    >
+      {/* Glow Effect */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 blur-2xl" />
+      </div>
+
+      {/* Image */}
+      <figure className="relative w-full h-52 md:h-56 overflow-hidden">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-out"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80" />
+
+        {/* Hover Icon */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <div className="bg-primary/90 p-3 rounded-lg shadow-lg scale-75 group-hover:scale-100 transition">
+            <Link className="w-6 h-6 text-white" />
+          </div>
+        </div>
+      </figure>
+
+      {/* Content */}
+      <div className="p-5 space-y-3">
+        <div className="flex justify-between items-center">
+          <h3 className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition">
+            {project.title}
+          </h3>
+          <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+            {project.category}
+          </span>
+        </div>
+
+        <p className="text-sm md:text-base text-muted-foreground leading-relaxed ">
+          {project.description}
+        </p>
+
+        {/* CTA */}
+        <div className="flex items-center justify-between pt-2">
+          <span className="text-sm text-primary font-medium group-hover:underline">
+            View Project →
+          </span>
+
+          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition">
+            <Link className="w-5 h-5 text-primary" />
+          </div>
+        </div>
+      </div>
+    </a>
+  ))}
+</section>
       </section>
     </main>
   );
