@@ -13,7 +13,7 @@ export default function Nav() {
 
   const navItems = [
     { name: "Resume", icon: FileText, href: "/landing-page/resume" },
-    { name: "Portfolio", icon: Folder, href: "/landing-page/portfolio" },
+    { name: "Portfolios", icon: Folder, href: "/landing-page/portfolio" },
     { name: "About", icon: User, href: "/" },
     { name: "Contact", icon: Mail, href: "/landing-page/contact" },
     { name: "Yappers", icon: FaMicrophoneAlt, href: "/landing-page/yappers" }, 
