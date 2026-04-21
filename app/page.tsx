@@ -144,56 +144,67 @@ export default function HomePage() {
 
           {/* Testimonials */}
           <section className="mt-16">
-            <h3 className="text-2xl font-semibold mb-6 text-foreground">
-              Testimonials
-            </h3>
+  <h3 className="text-2xl font-semibold mb-6 text-foreground">
+    Testimonials
+  </h3>
 
-            <div
-              id="testimonial-scroll"
-              className="flex gap-6 overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-smooth"
-              onScroll={(e) => {
-                const el = e.currentTarget;
-                const progress =
-                  (el.scrollLeft / (el.scrollWidth - el.clientWidth)) * 100;
-                const bar = document.getElementById("scroll-progress-bar");
-                if (bar) bar.style.width = `${progress}%`;
-              }}
-            >
-              {testimonials.map((t) => (
-                <div
-                  key={t.name}
-                  onClick={() => {
-                    setSelected(t);
-                    setOpen(true);
-                  }}
-                  className="relative cursor-pointer bg-card border border-border p-4 rounded-2xl shadow-md transition-all w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(50%-0.75rem)] snap-center flex-shrink-0 overflow-visible"
-                >
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2 pr-16">
-                      {t.name}
-                    </h4>
-                    <p className="text-base text-muted-foreground leading-relaxed line-clamp-4">
-                      {t.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+  <div
+    id="testimonial-scroll"
+    className="flex gap-6 overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-smooth"
+    onScroll={(e) => {
+      const el = e.currentTarget;
+      const progress = (el.scrollLeft / (el.scrollWidth - el.clientWidth)) * 100;
+      const bar = document.getElementById("scroll-progress-bar");
+      if (bar) bar.style.width = `${progress}%`;
+    }}
+  >
+    {testimonials.map((t) => (
+      <div
+        key={t.name}
+        onClick={() => {
+          setSelected(t);
+          setOpen(true);
+        }}
+        className="relative cursor-pointer bg-card border border-border p-5 rounded-2xl shadow-md transition-all w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(50%-0.75rem)] snap-center flex-shrink-0 overflow-visible"
+      >
+        {/* Avatar Positioned Top Right */}
+        <div className="absolute top-2 right-4 w-13 h-13 rounded-xl overflow-hidden border border-border bg-muted">
+          <img 
+            src={t.avatar} 
+            alt={t.name} 
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-            {/* Progress Bar */}
-            <div className="mt-2 h-[3px] w-full bg-border rounded-full overflow-hidden flex justify-center">
-              <div
-                id="scroll-progress-bar"
-                className="h-full bg-neutral-900 dark:bg-white rounded-full transition-all duration-300 ease-linear w-[0%]"
-              ></div>
-            </div>
-          </section>
+        <div>
+          <h4 className="text-lg font-semibold text-foreground mb-1 pr-14">
+            {t.name}
+          </h4>
+          <span className="text-xs text-muted-foreground block mb-3 italic">
+            {t.date}
+          </span>
+          <p className="text-base text-muted-foreground leading-relaxed line-clamp-4">
+            {t.text}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* Progress Bar */}
+  <div className="mt-2 h-[3px] w-full bg-border rounded-full overflow-hidden flex justify-center">
+    <div
+      id="scroll-progress-bar"
+      className="h-full bg-neutral-900 dark:bg-white rounded-full transition-all duration-300 ease-linear w-[0%]"
+    ></div>
+  </div>
+</section>
         </article>
       </section>
 
       {/* Modal (Dialog) */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="bg-card border border-border text-foreground rounded-3xl transition-colors shadow-xl w-[90%] max-w-lg mx-auto p-6 sm:w-auto sm:mx-0 cursor-pointer">
+        <DialogContent className="bg-card border border-border text-foreground rounded-xl md:rounded-3xl transition-colors shadow-xl w-[90%] max-w-lg mx-auto p-6 sm:w-auto sm:mx-0 cursor-pointer">
           {selected && (
             <>
               <DialogHeader>
@@ -201,9 +212,9 @@ export default function HomePage() {
                   <Image
                     src={selected.avatar}
                     alt={selected.name}
-                    width={80}
-                    height={80}
-                    className="rounded-2xl bg-muted border border-border"
+                    width={70}
+                    height={70}
+                    className="rounded-lg bg-muted border border-border"
                   />
                   {selected.name}
                 </DialogTitle>
@@ -211,7 +222,7 @@ export default function HomePage() {
                   {selected.date}
                 </DialogDescription>
               </DialogHeader>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mt-4">
                 {selected.text}
               </p>
             </>
