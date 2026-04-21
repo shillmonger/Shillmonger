@@ -174,7 +174,7 @@ const projects: Project[] = [
   {
     title: "Trust Loan",
     category: "Web Application",
-    image: "https://i.postimg.cc/hGk98C79/Screenshot-2025-11-06-154256.jpg",
+    image: "https://i.postimg.cc/85MNhq1M/Screenshot-2026-04-21-144534.jpg",
     link: "https://trustloaneth.com/",
     description:
       "A Decentralized Finance (DeFi) platform built to provide short-term crypto loans specifically tailored for active traders. It allows users to borrow digital assets, enabling them to leverage their trading positions.",
