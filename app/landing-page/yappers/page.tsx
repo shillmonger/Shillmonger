@@ -187,7 +187,7 @@ export default function ParallaxPage() {
             </p>
 
             <div className="flex w-full max-w-xl gap-4 sm:gap-5">
-              <Link href="/auth-page/login" className="flex-1">
+              <Link href="#" className="flex-1">
                 <button
                   className="
                     w-full px-6 py-3 text-sm sm:px-10 sm:py-4 sm:text-base
@@ -199,7 +199,7 @@ export default function ParallaxPage() {
                 </button>
               </Link>
 
-              <Link href="/auth-page/signup" className="flex-1">
+              <Link href="#" className="flex-1">
                 <button
                   className="
                     w-full px-6 py-3 text-sm sm:px-10 sm:py-4 sm:text-base
