@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { X, Star } from "lucide-react"
 
 type Rating = "great" | "good" | "bad" | null
@@ -60,8 +60,22 @@ export default function RateMe() {
   const [chosen, setChosen] = useState<Rating>(null)
   const [feedback, setFeedback] = useState("")
   const [submitted, setSubmitted] = useState(false)
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  useEffect(() => {
+    const lastShown = localStorage.getItem("rateMeLastShown")
+    const now = Date.now()
+    const fiveMinutes = 5 * 60 * 1000
+
+    if (!lastShown) {
+      setVisible(true)
+      localStorage.setItem("rateMeLastShown", now.toString())
+    } else if (now - parseInt(lastShown) > fiveMinutes) {
+      setVisible(true)
+      localStorage.setItem("rateMeLastShown", now.toString())
+    }
+  }, [])
 
   const handleSubmit = async () => {
     if (!chosen) return
