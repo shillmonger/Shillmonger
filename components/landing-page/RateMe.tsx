@@ -148,7 +148,7 @@ export default function RateMe() {
   return (
     <>
       {/* Popup — top-right on desktop only */}
-      <div className="fixed z-500 top-5 right-5">
+      <div className="hidden md:block fixed z-500 top-5 right-5">
         <div className="pointer-events-auto bg-card border border-border rounded-2xl shadow-xl w-[300px] p-6 relative transition-all duration-300">
 
           {/* Close */}
