@@ -42,7 +42,7 @@ export default function Sidebar() {
 
   // ✅ Instead of returning null early, conditionally render inside JSX
   return (
-    <aside className="flex-1 bg-card border border-border rounded-2xl px-4 py-6 md:p-5 shadow-lg overflow-y-auto transition-colors duration-300">
+    <aside className="flex-1 bg-card border border-border rounded-3xl px-4 py-6 md:p-5 shadow-lg overflow-y-auto transition-colors duration-300">
       {mounted && (
         <>
           {/* Avatar */}

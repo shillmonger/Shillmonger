@@ -31,87 +31,253 @@ interface Skill {
 
 const education: TimelineItem[] = [
   {
-    title: "Computer Science Studies",
-    date: "2013 – 2014",
+    title: "Full-Stack Web Development Training",
+    date: "Professional Training",
     description:
-      "Studied core computer science concepts including programming fundamentals, computer architecture, operating systems, databases, and software engineering. Developed problem-solving skills and gained experience working on collaborative technical projects.",
-  },
-  {
-    title: "Art & Design (Digital Focus)",
-    date: "2015 – 2016",
-    description:
-      "Learned visual design principles and user interface design with a focus on digital products. Explored front-end development concepts, responsive layouts, and the relationship between design, usability, and modern web technologies.",
+      "Comprehensive training covering frontend development, backend engineering, databases, REST API development, deployment workflows, and modern software engineering practices.",
     starred: true,
   },
   {
-    title: "Web Development Training – Verbum Networks Ltd",
-    date: "2014 – 2015",
+    title: "Software Engineering Fundamentals",
+    date: "Practical Learning",
     description:
-      "Completed practical training in web development, learning HTML, CSS, JavaScript, and foundational backend concepts. Built early web projects while gaining hands-on experience with real development workflows.",
-    starred: true,
+      "Built strong foundations in application architecture, debugging, performance optimization, responsive design principles, and scalable software development.",
   },
 ];
 
 const experience: TimelineItem[] = [
   {
-    title: "Full-Stack Web Development",
-    date: "2018 – Present",
+    title: "Independent Full-Stack Developer",
+    date: "2020 – Present",
     description:
-      "Building responsive and scalable web applications using modern technologies such as JavaScript, React, Node.js, and REST APIs. Focused on clean architecture, performance optimization, and delivering user-friendly digital experiences.",
-  },
-  {
-    title: "Technical Research & Algorithmic Trading",
-    date: "2019 – Present",
-    description:
-      "Applying data analysis and technical indicators to study financial markets. Developing structured trading strategies and using analytical tools to evaluate market trends and risk management.",
+      "Design, develop, deploy, and maintain modern web applications for personal projects and client-focused solutions. Build full-stack applications using React, Next.js, TypeScript, Node.js, and modern frontend technologies.",
     starred: true,
   },
   {
-    title: "Blockchain & Web3 Research",
-    date: "2018 – Present",
+    title: "API & Backend Development",
+    date: "2020 – Present",
     description:
-      "Exploring blockchain ecosystems, token distribution models, and decentralized platforms. Educating communities on identifying legitimate crypto opportunities, participating in airdrops, and maintaining security in the Web3 space.",
+      "Designed and integrated REST APIs, implemented authentication systems, protected routes, and managed scalable backend workflows using Node.js, Express, MySQL, and MongoDB.",
+  },
+  {
+    title: "Deployment & Production Engineering",
+    date: "2020 – Present",
+    description:
+      "Managed deployments using Docker, Vercel, and Render while improving application reliability, performance optimization, and debugging production issues.",
     starred: true,
+  },
+  {
+    title: "Web3 Application Development",
+    date: "2021 – Present",
+    description:
+      "Built and explored blockchain-focused applications involving wallet integrations, authentication systems, task/reward workflows, and decentralized user experiences.",
   },
 ];
 
-// 🔥 Updated Skill Stack With Categories
 const skills: Skill[] = [
-    // Frontend skills // 
-    { name: "CSS", value: 100, category: "frontend" },
-    { name: "HTML", value: 100, category: "frontend" },
-    { name: "React.js", value: 90, category: "frontend" },
-    { name: "Next.js", value: 95, category: "frontend" },
-    { name: "ShadCN UI", value: 85, category: "frontend" },
-    { name: "Bootstrap", value: 100, category: "frontend" },
-    { name: "JavaScript", value: 80, category: "frontend" },
-    { name: "TypeScript", value: 80, category: "frontend" },
-    { name: "Tailwind CSS", value: 100, category: "frontend" },
-    { name: "React Native", value: 70, category: "frontend" },
 
-  // Backend skills // 
-  { name: "MySQL", value: 70, category: "backend" },
-  { name: "REST APIs", value: 90, category: "backend" },
-  { name: "Node EJS", value: 100, category: "backend" },
-  { name: ".NET", value: 80, category: "backend" },
-  { name: "Node JS", value: 100, category: "backend" },
-  { name: "Express", value: 100, category: "backend" },
-  
-  // Dev tool skills // 
-  { name: "Docker", value: 70, category: "tools" },
-  { name: "Postman", value: 90, category: "tools" },
-  { name: "VS Code", value: 100, category: "tools" },
-  { name: "Git & GitHub", value: 90, category: "tools" },
-  { name: "Render Deployment", value: 100, category: "tools" },
-  { name: "Vercel Deployment", value: 100, category: "tools" },
-  { name: "Directus (Headless CMS)", value: 80, category: "tools" },
+  // Frontend
 
-  // Database skills // 
-  { name: "MySQL", value: 70, category: "Database" },
-  { name: "MongoDB", value: 85, category: "Database" },
-  { name: "PostgreSQL", value: 90, category: "Database" },
+  {
+    name: "HTML5",
+    value: 95,
+    category: "frontend",
+  },
+
+  {
+    name: "CSS",
+    value: 95,
+    category: "frontend",
+  },
+
+  {
+    name: "JavaScript",
+    value: 90,
+    category: "frontend",
+  },
+
+  {
+    name: "TypeScript",
+    value: 88,
+    category: "frontend",
+  },
+
+  {
+    name: "React.js",
+    value: 92,
+    category: "frontend",
+  },
+
+  {
+    name: "Next.js",
+    value: 95,
+    category: "frontend",
+  },
+
+  {
+    name: "Tailwind CSS",
+    value: 95,
+    category: "frontend",
+  },
+
+  {
+    name: "ShadCN UI",
+    value: 90,
+    category: "frontend",
+  },
+
+  {
+    name: "Responsive Design",
+    value: 95,
+    category: "frontend",
+  },
+
+
+
+  // Backend
+
+  {
+    name: "Node.js",
+    value: 92,
+    category: "backend",
+  },
+
+  {
+    name: "Express.js",
+    value: 90,
+    category: "backend",
+  },
+
+  {
+    name: "REST API Development",
+    value: 95,
+    category: "backend",
+  },
+
+  {
+    name: "Authentication",
+    value: 90,
+    category: "backend",
+  },
+
+  {
+    name: "Python",
+    value: 80,
+    category: "backend",
+  },
+
+  {
+    name: "Wallet Integration",
+    value: 85,
+    category: "backend",
+  },
+
+  {
+    name: "Web3 Authentication",
+    value: 85,
+    category: "backend",
+  },
+
+
+
+  // Tools
+
+  {
+    name: "Git & GitHub",
+    value: 90,
+    category: "tools",
+  },
+
+  {
+    name: "Docker",
+    value: 85,
+    category: "tools",
+  },
+
+  {
+    name: "Postman",
+    value: 92,
+    category: "tools",
+  },
+
+  {
+    name: "VS Code",
+    value: 100,
+    category: "tools",
+  },
+
+  {
+    name: "Directus CMS",
+    value: 80,
+    category: "tools",
+  },
+
+  {
+    name: "Vercel Deployment",
+    value: 95,
+    category: "tools",
+  },
+
+  {
+    name: "Render Deployment",
+    value: 95,
+    category: "tools",
+  },
+
+  {
+    name: "AI-Assisted Development",
+    value: 90,
+    category: "tools",
+  },
+
+
+// Database
+{
+  name: "MySQL",
+  value: 85,
+  category: "Database",
+},
+{
+  name: "MongoDB",
+  value: 100,
+  category: "Database",
+},
+{
+  name: "PostgreSQL",
+  value: 84,
+  category: "Database",
+},
+{
+  name: "SQLite",
+  value: 82,
+  category: "Database",
+},
+{
+  name: "Redis",
+  value: 80,
+  category: "Database",
+},
+{
+  name: "Firebase Firestore",
+  value: 86,
+  category: "Database",
+},
+{
+  name: "Supabase",
+  value: 85,
+  category: "Database",
+},
+{
+  name: "Prisma ORM",
+  value: 90,
+  category: "Database",
+},
+{
+  name: "Mongoose",
+  value: 100,
+  category: "Database",
+},
 ]
-
 export default function ResumePage() {
   const [filter, setFilter] = useState<string>("all")
 
@@ -193,7 +359,9 @@ export default function ResumePage() {
                 <DropdownMenuItem onClick={() => setFilter("frontend")}>Frontend</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setFilter("backend")}>Backend</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setFilter("tools")}>Dev Tools</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setFilter("general")}>General Experience</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setFilter("Database")}>
+   Database
+</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

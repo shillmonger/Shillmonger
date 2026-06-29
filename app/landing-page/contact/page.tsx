@@ -84,7 +84,7 @@ export default function ContactPage() {
             "
           >
             <CardHeader className="p-0">
-              <CardTitle className="text-2xl font-semibold text-foreground">
+              <CardTitle className="text-2xl mb-2 font-semibold text-foreground">
                 Send a Message
               </CardTitle>
             </CardHeader>

@@ -13,7 +13,7 @@ export default function Nav() {
 
   const navItems = [
     { name: "Resume", icon: FileText, href: "/landing-page/resume" },
-    { name: "Portfolios", icon: Folder, href: "/landing-page/portfolio" },
+    { name: "Projects", icon: Folder, href: "/landing-page/projects" },
     { name: "About", icon: User, href: "/" },
     { name: "Contact", icon: Mail, href: "/landing-page/contact" },
     { name: "Yappers", icon: FaMicrophoneAlt, href: "/yappers" }, 
@@ -23,7 +23,7 @@ export default function Nav() {
     <>
       {/* Desktop Navbar */}
       <nav className="hidden md:flex justify-end  top-4 right-4 z-50">
-        <div className="bg-muted border border-border rounded-2xl px-6 py-4 shadow-md inline-flex transition-colors duration-300">
+        <div className="bg-muted border border-border rounded-2xl px-4 py-3 shadow-md inline-flex transition-colors duration-300">
           <ul className="flex flex-wrap gap-6 text-foreground transition-colors duration-300">
             {navItems.map(({ name, href }) => {
               const isActive = href === "/" ? pathname === href : pathname.startsWith(href)

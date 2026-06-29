@@ -19,87 +19,119 @@ export default function HomePage() {
       name: "Daniel Lewis",
       avatar: "https://i.postimg.cc/zGDHfn3G/avatar-1.png",
       date: "14 June, 2023",
-      text: "Kingsley was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.",
+      text:
+        "Kingsley was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about client needs.",
     },
     {
       name: "Jessica Miller",
       avatar: "https://i.postimg.cc/DwY0yHtx/avatar-2.png",
       date: "22 July, 2023",
-      text: "Working with Kingsley has been an absolute pleasure. I was impressed with his attention to detail and professional approach to web design and development.",
+      text:
+        "Working with Kingsley has been an absolute pleasure. I was impressed with his attention to detail and professional approach to development.",
     },
     {
       name: "Michael Scott",
       avatar: "https://i.postimg.cc/fRFWhX9F/avatar-3.png",
       date: "2 September, 2023",
-      text: "Kingsley is an exceptional developer who always delivers above expectations. His creativity and problem-solving skills made our project a great success.",
+      text:
+        "Kingsley is an exceptional developer who consistently delivers above expectations. His problem-solving skills made our project successful.",
     },
     {
       name: "Sophia Turner",
       avatar: "https://i.postimg.cc/zXv1Xv81/avatar-4.png",
       date: "10 October, 2023",
-      text: "Kingsley’s professionalism and skillset are outstanding. He transformed our vague ideas into a stunning and functional design. Highly recommend!",
+      text:
+        "Kingsley's professionalism and technical expertise transformed our ideas into a scalable and beautiful product.",
     },
   ];
 
   return (
     <>
       <article>
-        <header className="mb-6">
+        <header className="mb-3">
           <h2 className="text-3xl font-bold text-foreground mb-2">
             About Me
           </h2>
-          <div className="h-[3px] w-20 bg-yellow-300 rounded-full"></div>
+          <div className="h-[3px] w-20 bg-primary rounded-full"></div>
         </header>
 
+        {/* About Content */}
         <section className="space-y-4 text-muted-foreground leading-relaxed">
+
           <p>
-            I'm a Web Developer from Nigeria, working in web development. I
-            enjoy turning complex problems into simple, beautiful, and
-            intuitive designs.
+            I'm <span className="font-medium text-foreground">
+              Kingsley Ezeaka Chidera
+            </span>, a passionate Full-Stack Software Engineer focused on
+            building scalable, responsive, and production-ready web
+            applications. I enjoy transforming ideas and complex problems into
+            fast, intuitive, and user-friendly digital experiences.
           </p>
+
           <p>
-            My job is to build your website so that it is functional and
-            user-friendly but at the same time attractive. Moreover, I add a
-            personal touch to your product and make sure that it is
-            eye-catching and easy to use. My aim is to bring across your
-            message and identity in the most creative way. I created web
-            designs for many famous brand companies.
+            Over the years, I've worked across the entire development
+            lifecycle — from frontend interfaces to backend systems, database
+            design, authentication workflows, API integrations, and deployment
+            pipelines. I primarily work with React, Next.js, TypeScript,
+            Node.js, Express, MySQL, MongoDB, Python and modern deployment platforms etc.
           </p>
+
+          <p>
+            I love building reusable architectures, optimizing application
+            performance, integrating modern technologies, and creating products
+            that solve real-world problems. Whether it's Web3 platforms,
+            business solutions, marketplaces, or custom applications, my goal
+            is always delivering reliable and scalable software.
+          </p>
+
+         {/* Resume button positioned naturally */}
+<div className="pt-4">
+  <a
+    href="/ShillmongerCV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex px-8 py-2.5 rounded-lg text-lg font-semibold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
+  >
+    View My Resume
+  </a>
+</div>
+
         </section>
 
         {/* What I'm Doing */}
-        <section className="mt-12">
-          <h3 className="text-2xl font-semibold mb-6 text-foreground">
+        <section className="mt-10">
+          <h3 className="text-2xl font-semibold mb-4 text-foreground">
             What I'm Doing
           </h3>
-          <ul className="grid sm:grid-cols-2 gap-6">
+
+          <ul className="grid sm:grid-cols-2 gap-3 sm:gap-5">
             {[
               {
-                title: "Web Design",
-                text: "The most modern and high-quality design made at a professional level.",
+                title: "Frontend Development",
+                text: "Building modern responsive interfaces using React, Next.js, TypeScript, Tailwind CSS and reusable component architectures.",
               },
               {
-                title: "Web Development",
-                text: "High-quality development of sites at the professional level.",
+                title: "Backend Development",
+                text: "Designing scalable server-side systems, REST APIs, authentication workflows and application logic using Node.js and Express.",
               },
               {
-                title: "Mobile Apps",
-                text: "Professional development of applications for iOS and Android.",
+                title: "Full-Stack Applications",
+                text: "Developing complete end-to-end solutions from database design to deployment using MySQL, MongoDB and production-ready workflows.",
               },
               {
-                title: "Forex Trading",
-                text: "Expert insights and strategies from market analysis to risk management.",
+                title: "Deployment & Optimization",
+                text: "Deploying, debugging and optimizing applications using Docker, Vercel, Render and performance-focused development practices.",
               },
             ].map((item) => (
               <li
                 key={item.title}
-                className="bg-card border border-border p-4 sm:p-6 rounded-2xl shadow-md hover:scale-[1.03] transition-transform cursor-pointer"
+                className="bg-card border border-border p-4 sm:py-4 sm:px-5 rounded-2xl shadow-md hover:scale-[1.03] transition-transform cursor-pointer"
               >
-                <div className="flex flex-col sm:flex-row items-start gap-4">
+                <div className="flex flex-col gap-4">
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-1">
                       {item.title}
                     </h4>
+
                     <p className="text-base text-muted-foreground">
                       {item.text}
                     </p>
@@ -110,21 +142,9 @@ export default function HomePage() {
           </ul>
         </section>
 
-        {/* View / Download CV Buttons */}
-        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <a
-            href="https://still-pond-693.linkyhost.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3 rounded-xl text-lg font-semibold cursor-pointer text-center bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
-          >
-            View My Resume
-          </a>
-        </div>
-
         {/* Testimonials */}
-        <section className="mt-16">
-          <h3 className="text-2xl font-semibold mb-6 text-foreground">
+        <section className="mt-10">
+          <h3 className="text-2xl font-semibold mb-4 text-foreground">
             Testimonials
           </h3>
 
@@ -133,9 +153,19 @@ export default function HomePage() {
             className="flex gap-6 overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory scroll-smooth"
             onScroll={(e) => {
               const el = e.currentTarget;
-              const progress = (el.scrollLeft / (el.scrollWidth - el.clientWidth)) * 100;
-              const bar = document.getElementById("scroll-progress-bar");
-              if (bar) bar.style.width = `${progress}%`;
+
+              const progress =
+                (el.scrollLeft /
+                  (el.scrollWidth - el.clientWidth)) *
+                100;
+
+              const bar =
+                document.getElementById(
+                  "scroll-progress-bar"
+                );
+
+              if (bar)
+                bar.style.width = `${progress}%`;
             }}
           >
             {testimonials.map((t) => (
@@ -147,11 +177,10 @@ export default function HomePage() {
                 }}
                 className="relative cursor-pointer bg-card border border-border p-5 rounded-2xl shadow-md transition-all w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(50%-0.75rem)] snap-center flex-shrink-0 overflow-visible"
               >
-                {/* Avatar Positioned Top Right */}
                 <div className="absolute top-2 right-4 w-13 h-13 rounded-xl overflow-hidden border border-border bg-muted">
-                  <img 
-                    src={t.avatar} 
-                    alt={t.name} 
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -160,9 +189,11 @@ export default function HomePage() {
                   <h4 className="text-lg font-semibold text-foreground mb-1 pr-14">
                     {t.name}
                   </h4>
+
                   <span className="text-xs text-muted-foreground block mb-3 italic">
                     {t.date}
                   </span>
+
                   <p className="text-base text-muted-foreground leading-relaxed line-clamp-4">
                     {t.text}
                   </p>
@@ -171,17 +202,16 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Progress Bar */}
           <div className="mt-2 h-[3px] w-full bg-border rounded-full overflow-hidden flex justify-center">
             <div
               id="scroll-progress-bar"
               className="h-full bg-neutral-900 dark:bg-white rounded-full transition-all duration-300 ease-linear w-[0%]"
-            ></div>
+            />
           </div>
         </section>
       </article>
 
-      {/* Modal (Dialog) */}
+      {/* Modal */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="bg-card border border-border text-foreground rounded-xl md:rounded-3xl transition-colors shadow-xl w-[90%] max-w-lg mx-auto p-6 sm:w-auto sm:mx-0 cursor-pointer">
           {selected && (
@@ -197,10 +227,12 @@ export default function HomePage() {
                   />
                   {selected.name}
                 </DialogTitle>
+
                 <DialogDescription className="text-sm text-muted-foreground">
                   {selected.date}
                 </DialogDescription>
               </DialogHeader>
+
               <p className="text-muted-foreground leading-relaxed mt-4">
                 {selected.text}
               </p>
