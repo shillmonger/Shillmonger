@@ -102,16 +102,7 @@ const shillmonger = {
 
 ## Featured Projects
 
-<div align="center">
-
-&nbsp;
-<a href="https://github.com/shillmonger/taskkash">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=shillmonger&repo=taskkash&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&icon_color=7c3aed" />
-</a>
-
-</div>
-
-<br/>
+<div align="center">    
 
 | Project | Description | Stack |
 |---------|-------------|-------|
