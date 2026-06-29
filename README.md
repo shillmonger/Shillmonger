@@ -32,23 +32,21 @@ const shillmonger = {
 };
 ```
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shillmonger&layout=donut&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&langs_count=8" width="280"/>
+### About Me
 
-### 🧠 About Me
-
-- 🔭 Building **scalable full-stack applications & REST APIs**
-- ⛓️ Exploring **Web3**, wallet integrations & on-chain mechanics
-- 🤖 Integrating **AI** into development workflows
-- 🏗️ Passionate about **clean architecture** and system design
-- 🌱 Always learning — currently deep in **distributed systems**
-- 🤝 Open to **collaborations** on interesting projects
-- ⚡ Fun fact: I ship features faster than I sleep
+- Building **scalable full-stack applications & REST APIs**
+- Exploring **Web3**, wallet integrations & on-chain mechanics
+- Integrating **AI** into development workflows
+- Passionate about **clean architecture** and system design
+- Always learning — currently deep in **distributed systems**
+- Open to **collaborations** on interesting projects
+- Fun fact: I ship features faster than I sleep
 
 <br clear="right"/>
 
 ---
 
-## 🛠️ Tech Arsenal
+## Tech Arsenal
 
 **Frontend**
 
@@ -91,23 +89,17 @@ const shillmonger = {
 
 ---
 
-## 📊 GitHub Analytics
+## GitHub Analytics
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=shillmonger&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&icon_color=7c3aed&include_all_commits=true&count_private=true" height="180"/>
-&nbsp;
 <img src="https://streak-stats.demolab.com?user=shillmonger&theme=midnight-purple&hide_border=true&background=0d0d1a&ring=7c3aed&fire=a78bfa&currStreakLabel=c4b5fd&sideLabels=c4b5fd&dates=6b7280" height="180"/>
 
-<br/><br/>
+<br/>
 
 <!-- ACTIVITY GRAPH -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=shillmonger&theme=react-dark&bg_color=0d0d1a&color=a78bfa&line=7c3aed&point=c4b5fd&area=true&hide_border=true" width="95%"/>
 
-<br/>
-
-<!-- TROPHIES -->
-<img src="https://github-profile-trophy.vercel.app/?username=shillmonger&theme=darkhub&no-frame=true&no-bg=true&column=7&margin-w=8" width="95%"/>
 
 <br/>
 
@@ -122,7 +114,7 @@ const shillmonger = {
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 <div align="center">
 
@@ -148,29 +140,29 @@ const shillmonger = {
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| 🛡️ **CyberYearn** | Educational cybersecurity platform for learning ethical hacking and digital security concepts | Next.js · Node.js · MongoDB |
-| 📈 **Secure Rise** | Trading investment platform where users invest and monitor portfolios in real-time | Next.js · Express · MySQL |
-| 🤖 **Trust Wallet XP** | Telegram bot helping users earn XP rewards and complete on-chain tasks | Node.js · Web3 · Telegram API |
-| 🌐 **TaskKash** | Web3 task and reward platform connecting contributors with crypto rewards | Next.js · Solidity · Web3.js |
+| **CyberYearn** | Educational cybersecurity platform for learning ethical hacking and digital security concepts | Next.js · Node.js · MongoDB |
+| **Secure Rise** | Trading investment platform where users invest and monitor portfolios in real-time | Next.js · Express · MySQL |
+| **Trust Wallet XP** | Telegram bot helping users earn XP rewards and complete on-chain tasks | Node.js · Web3 · Telegram API |
+| **TaskKash** | Web3 task and reward platform connecting contributors with crypto rewards | Next.js · Solidity · Web3.js |
 
 ---
 
-## 🎯 Current Focus
+## Current Focus
 
 ```bash
 $ shillmonger --status
 
-🔨 Building    →  Full-stack applications with Next.js & Node.js
-⚙️  Engineering →  Scalable REST APIs & microservice architecture  
-⛓️  Exploring   →  Web3 integrations & on-chain mechanics
-🔐 Securing    →  Auth systems: JWT, OAuth, session management
-🧱 Designing   →  Scalable backend architecture patterns
-🤖 Leveraging  →  AI tools to 10x development speed
+Building    →  Full-stack applications with Next.js & Node.js
+Engineering →  Scalable REST APIs & microservice architecture  
+Exploring   →  Web3 integrations & on-chain mechanics
+Securing    →  Auth systems: JWT, OAuth, session management
+Designing   →  Scalable backend architecture patterns
+Leveraging  →  AI tools to 10x development speed
 ```
 
 ---
 
-## 💬 Dev Quote of the Day
+## Dev Quote of the Day
 
 <div align="center">
 
@@ -180,7 +172,7 @@ $ shillmonger --status
 
 ---
 
-## 🌐 Connect With Me
+## Connect With Me
 
 <div align="center">
 
