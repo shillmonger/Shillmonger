@@ -64,17 +64,37 @@ export default function RateMe() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
-    const lastShown = localStorage.getItem("rateMeLastShown")
-    const now = Date.now()
-    const fiveMinutes = 5 * 60 * 1000
+    const checkAndShow = () => {
+      const lastShown = localStorage.getItem("rateMeLastShown")
+      const now = Date.now()
+      const fiveMinutes = 5 * 60 * 1000
 
-    if (!lastShown) {
-      localStorage.setItem("rateMeLastShown", now.toString())
-    } else if (now - parseInt(lastShown) > fiveMinutes) {
-      setVisible(true)
-      localStorage.setItem("rateMeLastShown", now.toString())
+      if (!lastShown) {
+        const pageLoadTime = sessionStorage.getItem("pageLoadTime")
+        if (!pageLoadTime) {
+          sessionStorage.setItem("pageLoadTime", now.toString())
+          return
+        }
+        const timeOnPage = now - parseInt(pageLoadTime)
+        if (timeOnPage > fiveMinutes && !visible) {
+          setVisible(true)
+          localStorage.setItem("rateMeLastShown", now.toString())
+        }
+        return
+      }
+
+      const timeSinceLastShown = now - parseInt(lastShown)
+      if (timeSinceLastShown > fiveMinutes && !visible) {
+        setVisible(true)
+        localStorage.setItem("rateMeLastShown", now.toString())
+      }
     }
-  }, [])
+
+    checkAndShow()
+
+    const interval = setInterval(checkAndShow, 10000)
+    return () => clearInterval(interval)
+  }, [visible])
 
   const handleSubmit = async () => {
     if (!chosen) return

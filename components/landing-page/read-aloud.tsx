@@ -107,29 +107,7 @@ return (
 
     <button
       onClick={handleClick}
-      className="
-        fixed
-        bottom-36
-        lg:bottom-24
-        right-2
-        lg:right-6
-        z-50
-        h-11
-        w-11
-        rounded-xl
-        cursor-pointer
-        border
-        border-border
-        bg-primary
-        text-primary-foreground
-        shadow-xl
-        flex
-        items-center
-        justify-center
-        hover:scale-110
-        transition-all
-        duration-200
-      "
+      className="fixed bottom-36 lg:bottom-24 right-2 lg:right-6 z-50 h-11 w-11 rounded-xl cursor-pointer border border-border bg-primary text-primary-foreground shadow-xl flex items-center justify-center hover:scale-110 transition-all duration-200"
       title={
         !isReading
           ? 'Read Aloud'
