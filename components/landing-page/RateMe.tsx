@@ -69,7 +69,6 @@ export default function RateMe() {
     const fiveMinutes = 5 * 60 * 1000
 
     if (!lastShown) {
-      setVisible(true)
       localStorage.setItem("rateMeLastShown", now.toString())
     } else if (now - parseInt(lastShown) > fiveMinutes) {
       setVisible(true)
