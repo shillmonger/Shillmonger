@@ -65,9 +65,12 @@ export default function RateMe() {
 
   useEffect(() => {
     const checkAndShow = () => {
+      const isDesktop = window.innerWidth >= 768
+      if (!isDesktop) return
+
       const lastShown = localStorage.getItem("rateMeLastShown")
       const now = Date.now()
-      const fiveMinutes = 5 * 60 * 1000
+      const tenMinutes = 10 * 60 * 1000
 
       if (!lastShown) {
         const pageLoadTime = sessionStorage.getItem("pageLoadTime")
@@ -76,7 +79,7 @@ export default function RateMe() {
           return
         }
         const timeOnPage = now - parseInt(pageLoadTime)
-        if (timeOnPage > fiveMinutes && !visible) {
+        if (timeOnPage > tenMinutes && !visible) {
           setVisible(true)
           localStorage.setItem("rateMeLastShown", now.toString())
         }
@@ -84,7 +87,7 @@ export default function RateMe() {
       }
 
       const timeSinceLastShown = now - parseInt(lastShown)
-      if (timeSinceLastShown > fiveMinutes && !visible) {
+      if (timeSinceLastShown > tenMinutes && !visible) {
         setVisible(true)
         localStorage.setItem("rateMeLastShown", now.toString())
       }
