@@ -62,10 +62,25 @@ export default function RateMe() {
   const [submitted, setSubmitted] = useState(false)
   const [visible, setVisible] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768)
+    }
+
+    checkDesktop()
+
+    const handleResize = () => {
+      checkDesktop()
+    }
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   useEffect(() => {
     const checkAndShow = () => {
-      const isDesktop = window.innerWidth >= 768
       if (!isDesktop) return
 
       const lastShown = localStorage.getItem("rateMeLastShown")
@@ -97,7 +112,7 @@ export default function RateMe() {
 
     const interval = setInterval(checkAndShow, 10000)
     return () => clearInterval(interval)
-  }, [visible])
+  }, [visible, isDesktop])
 
   const handleSubmit = async () => {
     if (!chosen) return
@@ -128,19 +143,12 @@ export default function RateMe() {
     }
   }
 
-  if (!visible) return null
+  if (!visible || !isDesktop) return null
 
   return (
     <>
-      {/* Mobile backdrop — blurs the page on small screens */}
-      <div
-        className="fixed inset-0 z-500 bg-black/40 backdrop-blur-sm sm:hidden"
-        onClick={() => setVisible(false)}
-        aria-hidden="true"
-      />
-
-      {/* Popup — top-right on desktop, centered on mobile */}
-      <div className="fixed z-500 inset-0 flex items-center justify-center pointer-events-none sm:inset-auto sm:top-5 sm:right-5 sm:block">
+      {/* Popup — top-right on desktop only */}
+      <div className="fixed z-500 top-5 right-5">
         <div className="pointer-events-auto bg-card border border-border rounded-2xl shadow-xl w-[300px] p-6 relative transition-all duration-300">
 
           {/* Close */}
