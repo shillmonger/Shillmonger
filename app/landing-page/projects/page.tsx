@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     title: "Secure Rise",
     category: "Web Application",
-    image: "https://i.postimg.cc/Zngbz07L/secure-rise.jpg",
+    image: "https://i.postimg.cc/ZRVzh5NN/secure-rise.png",
     link: "https://securerise.vercel.app/",
     description:
       "A trading investment platform where users deposit capital, the system trades on their behalf, distributes profits to investors, and retains a percentage as platform fees.",
@@ -100,6 +100,15 @@ const projects: Project[] = [
     link: "https://melons-opal.vercel.app/",
     description:
       "A meme-sharing community where creativity meets humor. Users can create, post, and explore the funniest trends of the day with ease and style.",
+  },
+  
+  {
+    title: "Campus Ambassadors",
+    category: "Web Development",
+    image: "https://i.postimg.cc/859QCnZq/campus.png",
+    link: "https://campus-ambassadors.vercel.app/",
+    description:
+      "Empowering the Next Generation of Campus Leaders Across Africa. Join a fast-growing community of student ambassadors building careers in tech, marketing, and leadership.",
   },
   {
     title: "MCP Server",
