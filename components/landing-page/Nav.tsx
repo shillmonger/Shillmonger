@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { User, FileText, Folder, Mail } from "lucide-react"
+import { User, FileText, Folder, Mail, NotebookPen } from "lucide-react"
 import { FaMicrophoneAlt } from "react-icons/fa"
 
 const ThemeToggle = dynamic(() => import("../ThemeToggle"), { ssr: false })
@@ -12,9 +12,10 @@ export default function Nav() {
   const pathname = usePathname()
 
   const navItems = [
+    { name: "About", icon: User, href: "/" },
     { name: "Resume", icon: FileText, href: "/landing-page/resume" },
     { name: "Projects", icon: Folder, href: "/landing-page/projects" },
-    { name: "About", icon: User, href: "/" },
+    { name: "Blog", icon: NotebookPen, href: "/landing-page/blog" },
     { name: "Contact", icon: Mail, href: "/landing-page/contact" },
     { name: "Yappers", icon: FaMicrophoneAlt, href: "/yappers" }, 
   ]
@@ -48,7 +49,7 @@ export default function Nav() {
 
 
       {/* Mobile Navbar */}
-      <nav className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full bg-card/90 backdrop-blur-md border-t border-x border-border rounded-t-3xl px-4 py-2 flex justify-between items-center text-foreground shadow-lg z-50 transition-all duration-300">
+      <nav className="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full bg-card/90 backdrop-blur-md border-t border-x border-border rounded-t-3xl px-2 py-1.5 flex justify-between items-center text-foreground shadow-lg z-50 transition-all duration-300">
         {navItems.map(({ name, icon: Icon, href }) => {
           const isActive = href === "/" ? pathname === href : pathname.startsWith(href)
           const linkClasses = [

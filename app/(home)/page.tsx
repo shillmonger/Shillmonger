@@ -142,6 +142,35 @@ export default function HomePage() {
           </ul>
         </section>
 
+        {/* Troubleshooting & Problem Solving */}
+        <section className="mt-10">
+          <h3 className="text-2xl font-semibold mb-4 text-foreground">
+            Problem Solving
+          </h3>
+
+          <section className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Throughout my development journey, I've encountered and resolved countless errors — from CORS issues and database connection failures to deployment pipeline breaks and memory leaks. Each challenge has been an opportunity to deepen my understanding of how systems work.
+            </p>
+
+            <p>
+              When debugging, I follow a systematic approach: isolate the problem, reproduce the error consistently, analyze logs and stack traces, and implement targeted fixes. I've learned that the most frustrating bugs often stem from the simplest oversights — missing environment variables, incorrect API endpoints, or race conditions in async operations.
+            </p>
+
+            <p>
+              Deployment challenges have taught me the importance of thorough testing, proper environment configuration, and monitoring. Whether it's fixing build failures on Vercel, resolving Docker container issues, or optimizing database queries for production, I approach each problem with patience and a commitment to finding the root cause rather than applying temporary patches.
+            </p>
+
+            <p>
+              Performance optimization is another area where I've gained significant experience. I've tackled slow page loads, unoptimized images, inefficient database queries, and bundle size issues. Using tools like Lighthouse, Chrome DevTools, and Web Vitals, I systematically identify bottlenecks and implement solutions such as code splitting, lazy loading, caching strategies, and CDN integration to ensure applications run smoothly at scale.
+            </p>
+
+            <p>
+              Security vulnerabilities are errors I take very seriously. From XSS and CSRF attacks to SQL injection and authentication bypasses, I've learned to implement security best practices from the start of development. Regular security audits, dependency updates, and following OWASP guidelines help me build applications that are not only functional but also secure for users and their data.
+            </p>
+          </section>
+        </section>
+
         {/* Testimonials */}
         <section className="mt-10">
           <h3 className="text-2xl font-semibold mb-4 text-foreground">

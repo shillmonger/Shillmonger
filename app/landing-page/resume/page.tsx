@@ -337,6 +337,117 @@ export default function ResumePage() {
           </ol>
         </section>
 
+        {/* Tech Arsenal Section */}
+        <section className="mt-12 mb-12 p-5 sm:p-6 bg-card border border-border rounded-2xl shadow-md transition-colors duration-300">
+          <h3 className="text-2xl font-semibold text-foreground mb-6">Tech Arsenal</h3>
+
+          <div className="space-y-6">
+            {/* Frontend */}
+            <div>
+              <h4 className="text-sm font-semibold text-muted-foreground mb-3 tracking-wider uppercase">Frontend</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: "HTML5", color: "E34F26", logo: "html5" },
+                  { name: "CSS3", color: "1572B6", logo: "css3" },
+                  { name: "JavaScript", color: "F7DF1E", logo: "javascript" },
+                  { name: "TypeScript", color: "3178C6", logo: "typescript" },
+                  { name: "React", color: "20232A", logo: "react" },
+                  { name: "Next.js", color: "000000", logo: "nextdotjs" },
+                  { name: "TailwindCSS", color: "06B6D4", logo: "tailwindcss" },
+                  { name: "ShadCN", color: "000000", logo: "shadcnui" },
+                ].map((tech) => (
+                  <img
+                    key={tech.name}
+                    src={`https://img.shields.io/badge/${tech.name}-${tech.color}?style=for-the-badge&logo=${tech.logo}&logoColor=white`}
+                    alt={tech.name}
+                    className="h-7"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Backend */}
+            <div>
+              <h4 className="text-sm font-semibold text-muted-foreground mb-3 tracking-wider uppercase">Backend</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: "Node.js", color: "339933", logo: "nodedotjs" },
+                  { name: "Express.js", color: "000000", logo: "express" },
+                  { name: "REST_APIs", color: "FF6C37", logo: "postman" },
+                  { name: "Auth/JWT", color: "000000", logo: "jsonwebtokens" },
+                ].map((tech) => (
+                  <img
+                    key={tech.name}
+                    src={`https://img.shields.io/badge/${tech.name}-${tech.color}?style=for-the-badge&logo=${tech.logo}&logoColor=white`}
+                    alt={tech.name}
+                    className="h-7"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Database */}
+            <div>
+              <h4 className="text-sm font-semibold text-muted-foreground mb-3 tracking-wider uppercase">Database</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: "MongoDB", color: "47A248", logo: "mongodb" },
+                  { name: "MySQL", color: "4479A1", logo: "mysql" },
+                ].map((tech) => (
+                  <img
+                    key={tech.name}
+                    src={`https://img.shields.io/badge/${tech.name}-${tech.color}?style=for-the-badge&logo=${tech.logo}&logoColor=white`}
+                    alt={tech.name}
+                    className="h-7"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Tools & Platforms */}
+            <div>
+              <h4 className="text-sm font-semibold text-muted-foreground mb-3 tracking-wider uppercase">Tools & Platforms</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: "Git", color: "F05032", logo: "git" },
+                  { name: "GitHub", color: "181717", logo: "github" },
+                  { name: "Docker", color: "2496ED", logo: "docker" },
+                  { name: "VS_Code", color: "007ACC", logo: "visualstudiocode" },
+                  { name: "Postman", color: "FF6C37", logo: "postman" },
+                  { name: "Vercel", color: "000000", logo: "vercel" },
+                  { name: "Render", color: "46E3B7", logo: "render" },
+                ].map((tech) => (
+                  <img
+                    key={tech.name}
+                    src={`https://img.shields.io/badge/${tech.name}-${tech.color}?style=for-the-badge&logo=${tech.logo}&logoColor=white`}
+                    alt={tech.name}
+                    className="h-7"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Web3 & Emerging */}
+            <div>
+              <h4 className="text-sm font-semibold text-muted-foreground mb-3 tracking-wider uppercase">Web3 & Emerging</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: "Web3", color: "F16822", logo: "web3dotjs" },
+                  { name: "Wallet_Integration", color: "7B3FE4", logo: "ethereum" },
+                  { name: "AI--Assisted_Dev", color: "10A37F", logo: "openai" },
+                ].map((tech) => (
+                  <img
+                    key={tech.name}
+                    src={`https://img.shields.io/badge/${tech.name}-${tech.color}?style=for-the-badge&logo=${tech.logo}&logoColor=white`}
+                    alt={tech.name}
+                    className="h-7"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Skills Section */}
         <section className="p-5 sm:p-6 bg-muted border border-border rounded-2xl shadow-md transition-colors duration-300">
           <div className="flex items-center justify-between mb-6">

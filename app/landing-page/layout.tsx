@@ -1,5 +1,6 @@
 import Sidebar from "@/components/landing-page/Sidebar";
 import Nav from "@/components/landing-page/Nav";
+import ReadAloud from "@/components/landing-page/read-aloud";
 
 export default function LandingPageLayout({
   children,
@@ -17,7 +18,10 @@ export default function LandingPageLayout({
       {/* Right Content */}
       <section className="flex-1 bg-card border border-border rounded-3xl p-4 md:p-10 shadow-lg transition-colors mb-25 sm:mb-0">
         <Nav />
-        {children}
+        <div id="page-content">
+          {children}
+        </div>
+        <ReadAloud targetId="page-content" />
       </section>
 
     </main>

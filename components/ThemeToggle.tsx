@@ -37,7 +37,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(nextTheme)}
-      className="fixed bottom-25 right-2 z-50 sm:bottom-10 sm:right-6 flex items-center justify-center w-12 h-12 rounded-lg
+      className="fixed bottom-22 right-2 z-50 sm:bottom-10 sm:right-6 flex items-center justify-center w-12 h-12 rounded-lg
       bg-neutral-200 text-neutral-800 shadow-lg transition-all duration-300 hover:bg-neutral-300 
       dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700 cursor-pointer
       focus:outline-none"
