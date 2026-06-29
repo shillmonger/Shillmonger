@@ -3,6 +3,8 @@
 import Sidebar from "@/components/landing-page/Sidebar";
 import Nav from "@/components/landing-page/Nav";
 import ReadAloud from "@/components/landing-page/read-aloud";
+import RateMe from "@/components/landing-page/RateMe"
+
 
 export default function HomeLayout({
   children,
@@ -39,6 +41,7 @@ export default function HomeLayout({
         <div id="page-content" className="pb-10">
           {children}
         </div>
+        <RateMe />
         <ReadAloud targetId="page-content" />
       </section>
 

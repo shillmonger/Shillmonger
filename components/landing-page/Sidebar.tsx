@@ -21,12 +21,17 @@ export default function Sidebar() {
   const [mounted, setMounted] = useState(false)
   const [showContacts, setShowContacts] = useState(false)
   const [currentImage, setCurrentImage] = useState(0)
+  const [currentNameIndex, setCurrentNameIndex] = useState(0)
+  const [typedName, setTypedName] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
 
   const images = [
     // "/shillmonger.jpeg",
     // "/shillmonger.jpeg",
     "/shillmonger.jpeg",
   ]
+
+  const names = ["EZEAKA", "CHIDERA", "KINGSLEY", "SHILLMONGER"]
 
   // ✅ Always call hooks before any conditional returns
   useEffect(() => {
@@ -39,6 +44,42 @@ export default function Sidebar() {
     }, 3000)
     return () => clearInterval(interval)
   }, [images.length])
+
+
+  useEffect(() => {
+    const currentName = names[currentNameIndex]
+    const typingSpeed = 150
+    const deletingSpeed = 100
+    const pauseAfterTyping = 1500
+    const pauseAfterDeleting = 500
+
+    if (!isDeleting) {
+      if (typedName.length < currentName.length) {
+        const timeout = setTimeout(() => {
+          setTypedName(currentName.slice(0, typedName.length + 1))
+        }, typingSpeed)
+        return () => clearTimeout(timeout)
+      } else {
+        const timeout = setTimeout(() => {
+          setIsDeleting(true)
+        }, pauseAfterTyping)
+        return () => clearTimeout(timeout)
+      }
+    } else {
+      if (typedName.length > 0) {
+        const timeout = setTimeout(() => {
+          setTypedName(typedName.slice(0, -1))
+        }, deletingSpeed)
+        return () => clearTimeout(timeout)
+      } else {
+        const timeout = setTimeout(() => {
+          setIsDeleting(false)
+          setCurrentNameIndex((prev) => (prev + 1) % names.length)
+        }, pauseAfterDeleting)
+        return () => clearTimeout(timeout)
+      }
+    }
+  }, [typedName, isDeleting, currentNameIndex, names])
 
   // ✅ Instead of returning null early, conditionally render inside JSX
   return (
@@ -67,7 +108,8 @@ export default function Sidebar() {
               </AnimatePresence>
             </div>
             <h1 className="text-2xl font-bold tracking-wide text-center text-foreground">
-              SHILLMONGER
+              {typedName}
+              <span className="inline-block w-2 h-6 bg-foreground ml-1 animate-pulse" />
             </h1>
             <p className="bg-muted px-4 py-1 mt-2 text-sm text-muted-foreground rounded-md">
               Full Stack Developer
@@ -158,7 +200,7 @@ export default function Sidebar() {
   </p>
 
   {/* SOCIAL LINKS */}
-  <ul className="flex justify-center flex-wrap gap-4 text-xl text-foreground">
+  <ul className="flex justify-center flex-wrap gap-2.5 text-xl text-foreground">
     {[
       // { href: "#", icon: <FaFacebook /> },
       {

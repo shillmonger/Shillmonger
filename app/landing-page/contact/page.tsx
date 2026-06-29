@@ -128,7 +128,7 @@ export default function ContactPage() {
                     className="
                       w-full sm:w-auto bg-foreground text-background 
                       hover:bg-foreground/90 font-semibold text-[15px]
-                      rounded-lg py-6 px-8 flex items-center justify-center gap-2
+                      rounded-lg py-6 px-10 flex items-center justify-center gap-2
                       transition-all cursor-pointer
                     "
                   >

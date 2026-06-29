@@ -44,7 +44,6 @@ export default function RootLayout({
                 },
               }}
               richColors={false}
-              closeButton
             />
           </div>
         </Providers>

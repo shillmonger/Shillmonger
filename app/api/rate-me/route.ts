@@ -5,10 +5,10 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const { fullname, email, message } = await req.json();
+    const { rating, feedback } = await req.json();
 
-    if (!fullname || !email || !message)
-      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+    if (!rating)
+      return NextResponse.json({ error: "Missing rating" }, { status: 400 });
       
     const contactEmail = process.env.CONTACT_EMAIL;
     if (!contactEmail) {
@@ -18,6 +18,10 @@ export async function POST(req: Request) {
         { status: 500 }
       );
     }
+
+    const ratingEmoji = rating === "great" ? "🎉" : rating === "good" ? "🙏" : "💪";
+    const ratingLabel = rating === "great" ? "Perfect port" : rating === "good" ? "Good port" : "Bad port";
+    const ratingColor = rating === "great" ? "#22c55e" : rating === "good" ? "#eab308" : "#ef4444";
 
     // Compose a styled HTML email
     const htmlContent = `
@@ -33,11 +37,13 @@ export async function POST(req: Request) {
           .header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 32px 40px; }
           .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.5px; }
           .content { padding: 40px; }
+          .rating-badge { display: inline-flex; align-items: center; gap: 8px; background: #f8f8f8; padding: 12px 20px; border-radius: 12px; margin-bottom: 24px; }
+          .rating-emoji { font-size: 28px; }
+          .rating-text { font-size: 16px; font-weight: 600; color: #1a1a1a; }
           .label { color: #666666; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-          .value { color: #1a1a1a; font-size: 16px; font-weight: 500; margin-bottom: 24px; }
-          .value a { color: #1a1a1a; text-decoration: none; }
-          .message-box { background: #f8f8f8; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; margin-top: 8px; }
-          .message-box p { color: #333333; font-size: 15px; line-height: 1.6; margin: 0; white-space: pre-wrap; }
+          .feedback-box { background: #f8f8f8; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; margin-top: 8px; }
+          .feedback-box p { color: #333333; font-size: 15px; line-height: 1.6; margin: 0; white-space: pre-wrap; }
+          .no-feedback { color: #888888; font-style: italic; font-size: 14px; }
           .footer { padding: 24px 40px; background: #fafafa; border-top: 1px solid #e5e5e5; }
           .footer p { color: #888888; font-size: 12px; margin: 0; }
         </style>
@@ -46,24 +52,23 @@ export async function POST(req: Request) {
         <div class="container">
           <div class="card">
             <div class="header">
-              <h1>✉️ New Contact Message</h1>
+              <h1>⭐ New Portfolio Rating</h1>
             </div>
             <div class="content">
-              <div class="label">From</div>
-              <div class="value">${fullname}</div>
-              
-              <div class="label">Email</div>
-              <div class="value">
-                <a href="mailto:${email}">${email}</a>
+              <div class="rating-badge">
+                <span class="rating-emoji">${ratingEmoji}</span>
+                <span class="rating-text">${ratingLabel}</span>
               </div>
               
-              <div class="label">Message</div>
-              <div class="message-box">
-                <p>${message}</p>
-              </div>
+              ${feedback ? `
+                <div class="label">Feedback</div>
+                <div class="feedback-box">
+                  <p>${feedback}</p>
+                </div>
+              ` : '<p class="no-feedback">No additional feedback provided</p>'}
             </div>
             <div class="footer">
-              <p>Sent from your portfolio contact form</p>
+              <p>Sent from your portfolio rating form</p>
             </div>
           </div>
         </div>
@@ -72,22 +77,21 @@ export async function POST(req: Request) {
     `;
 
     await resend.emails.send({
-      from: `${fullname} <onboarding@resend.dev>`, // you can customize this later
+      from: "Portfolio Rating <onboarding@resend.dev>",
       to: contactEmail,
-      subject: `New message from ${fullname}`,
+      subject: `New portfolio rating: ${ratingLabel}`,
       html: htmlContent,
     });
 
     return NextResponse.json(
-      { message: "Message sent successfully!" },
+      { message: "Rating submitted successfully!" },
       { status: 200 }
     );
   } catch (err) {
     console.error("Email error:", err);
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: "Failed to submit rating" },
       { status: 500 }
     );
   }
 }
-

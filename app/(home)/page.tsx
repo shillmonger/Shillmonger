@@ -18,28 +18,28 @@ export default function HomePage() {
     {
       name: "Daniel Lewis",
       avatar: "https://i.postimg.cc/zGDHfn3G/avatar-1.png",
-      date: "14 June, 2023",
+      date: "14 June, 2025",
       text:
         "Kingsley was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about client needs.",
     },
     {
       name: "Jessica Miller",
       avatar: "https://i.postimg.cc/DwY0yHtx/avatar-2.png",
-      date: "22 July, 2023",
+      date: "22 July, 2021",
       text:
         "Working with Kingsley has been an absolute pleasure. I was impressed with his attention to detail and professional approach to development.",
     },
     {
       name: "Michael Scott",
       avatar: "https://i.postimg.cc/fRFWhX9F/avatar-3.png",
-      date: "2 September, 2023",
+      date: "2 September, 2022",
       text:
         "Kingsley is an exceptional developer who consistently delivers above expectations. His problem-solving skills made our project successful.",
     },
     {
       name: "Sophia Turner",
       avatar: "https://i.postimg.cc/zXv1Xv81/avatar-4.png",
-      date: "10 October, 2023",
+      date: "10 October, 2025",
       text:
         "Kingsley's professionalism and technical expertise transformed our ideas into a scalable and beautiful product.",
     },
@@ -60,7 +60,7 @@ export default function HomePage() {
 
           <p>
             I'm <span className="font-medium text-foreground">
-              Kingsley Ezeaka Chidera
+              Ezeaka Chidera Kingsley
             </span>, a passionate Full-Stack Software Engineer focused on
             building scalable, responsive, and production-ready web
             applications. I enjoy transforming ideas and complex problems into

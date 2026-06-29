@@ -1,6 +1,7 @@
 import Sidebar from "@/components/landing-page/Sidebar";
 import Nav from "@/components/landing-page/Nav";
 import ReadAloud from "@/components/landing-page/read-aloud";
+import RateMe from "@/components/landing-page/RateMe";
 
 export default function LandingPageLayout({
   children,
@@ -21,6 +22,7 @@ export default function LandingPageLayout({
         <div id="page-content">
           {children}
         </div>
+        <RateMe />
         <ReadAloud targetId="page-content" />
       </section>
 
