@@ -93,22 +93,8 @@ const shillmonger = {
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=shillmonger&theme=midnight-purple&hide_border=true&background=0d0d1a&ring=7c3aed&fire=a78bfa&currStreakLabel=c4b5fd&sideLabels=c4b5fd&dates=6b7280" height="180"/>
-
-<br/>
-
 <!-- ACTIVITY GRAPH -->
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=shillmonger&theme=react-dark&bg_color=0d0d1a&color=a78bfa&line=7c3aed&point=c4b5fd&area=true&hide_border=true" width="95%"/>
-
-
-<br/>
-
-<!-- CONTRIBUTION SNAKE -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/shillmonger/shillmonger/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/shillmonger/shillmonger/output/github-snake.svg"/>
-  <img alt="github contribution snake" src="https://raw.githubusercontent.com/shillmonger/shillmonger/output/github-snake-dark.svg" width="95%"/>
-</picture>
 
 </div>
 
@@ -118,17 +104,6 @@ const shillmonger = {
 
 <div align="center">
 
-<a href="https://github.com/shillmonger/cyberyearn">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=shillmonger&repo=cyberyearn&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&icon_color=7c3aed" />
-</a>
-&nbsp;
-<a href="https://github.com/shillmonger/secure-rise">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=shillmonger&repo=secure-rise&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&icon_color=7c3aed" />
-</a>
-
-<a href="https://github.com/shillmonger/trustwallet-xp">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=shillmonger&repo=trustwallet-xp&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&icon_color=7c3aed" />
-</a>
 &nbsp;
 <a href="https://github.com/shillmonger/taskkash">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=shillmonger&repo=taskkash&theme=midnight-purple&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&text_color=c4b5fd&icon_color=7c3aed" />
