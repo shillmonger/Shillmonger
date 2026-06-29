@@ -21,6 +21,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Cyber Yearn",
+    category: "Web Application",
+    image: "https://i.postimg.cc/fbqJr44Q/cyberyearn.png",
+    link: "https://cy-frontend-beta.vercel.app/",
+    description:
+      "An educational cyber platform where people learn about cybersecurity, ethical hacking, and digital defense. Built to empower users with real-world knowledge and hands-on skills.",
+  },
+  {
     title: "Secure Rise",
     category: "Web Application",
     image: "https://i.postimg.cc/ZRVzh5NN/secure-rise.png",
@@ -35,14 +43,6 @@ const projects: Project[] = [
     link: "https://t.me/trustwalletxp_bot",
     description:
       "Telegram bot for Trust Wallet XP, This bot helps users earn XP points by completing simple tasks. XP can unlock bonuses, features, and rewards inside the BOT",
-  },
-  {
-    title: "Cyber Yearn",
-    category: "Web Application",
-    image: "https://i.postimg.cc/fbqJr44Q/cyberyearn.png",
-    link: "https://cy-frontend-beta.vercel.app/",
-    description:
-      "An educational cyber platform where people learn about cybersecurity, ethical hacking, and digital defense. Built to empower users with real-world knowledge and hands-on skills.",
   },
   {
     title: "CETADEL ASSETS",
