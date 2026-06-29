@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Eye, ChevronDown, Link } from "lucide-react";
-import Sidebar from "@/components/landing-page/Sidebar";
-import Nav from "@/components/landing-page/Nav";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -224,18 +222,9 @@ const PortfolioPage = () => {
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-30 flex flex-col md:flex-row gap-6">
-      {/* Sidebar */}
-      <aside>
-        <Sidebar />
-      </aside>
-
-      {/* Main Section */}
-      <section className="flex-1 bg-card border border-border rounded-3xl p-4 md:p-10 shadow-lg overflow-y-auto mb-25 sm:mb-0 transition-colors duration-300">
-        <Nav />
-
-        {/* Header */}
-        <header className="mb-10">
+    <>
+      {/* Header */}
+      <header className="mb-10">
           <h2 className="text-3xl font-bold text-foreground mb-2">Portfolio</h2>
           <div className="h-[3px] w-20 bg-primary rounded-full"></div>
         </header>
@@ -359,8 +348,7 @@ const PortfolioPage = () => {
             </a>
           ))}
         </section>
-      </section>
-    </main>
+      </>
   );
 };
 

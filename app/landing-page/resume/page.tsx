@@ -4,8 +4,6 @@
 "use client"
 
 import React, { useState } from "react"
-import Sidebar from "@/components/landing-page/Sidebar"
-import Nav from "@/components/landing-page/Nav"
 import { IoBookOutline, IoBriefcaseOutline } from "react-icons/io5"
 import {
   DropdownMenu,
@@ -121,17 +119,8 @@ export default function ResumePage() {
     filter === "all" ? skills : skills.filter((s) => s.category === filter)
 
   return (
-    <main className="min-h-screen bg-background text-foreground transition-colors duration-300 p-3 md:py-10 md:px-30 flex flex-col md:flex-row gap-6">
-      {/* Sidebar */}
-      <aside>
-        <Sidebar />
-      </aside>
-
-      {/* Main Content */}
-      <section className="flex-1 bg-card border border-border rounded-3xl p-4 md:p-10 shadow-lg overflow-y-auto mb-25 sm:mb-0 transition-colors duration-300">
-        <Nav />
-
-        <header className="mb-8">
+    <>
+      <header className="mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-2">Resume</h2>
           <div className="h-[3px] w-20 bg-primary rounded-full"></div>
         </header>
@@ -226,8 +215,7 @@ export default function ResumePage() {
               </li>
             ))}
           </ul>
-        </section>
       </section>
-    </main>
+    </>
   )
 }

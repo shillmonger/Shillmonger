@@ -16,7 +16,7 @@ export default function Nav() {
     { name: "Portfolios", icon: Folder, href: "/landing-page/portfolio" },
     { name: "About", icon: User, href: "/" },
     { name: "Contact", icon: Mail, href: "/landing-page/contact" },
-    { name: "Yappers", icon: FaMicrophoneAlt, href: "/landing-page/yappers" }, 
+    { name: "Yappers", icon: FaMicrophoneAlt, href: "/yappers" }, 
   ]
 
   return (

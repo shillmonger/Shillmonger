@@ -3,13 +3,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import {
-  FaFacebook,
   FaTwitter,
   FaWhatsapp,
   FaInstagram,
   FaGithub,
+  FaTelegram,
 } from "react-icons/fa"
-import { MdEmail, MdPhoneIphone, MdCalendarToday, MdLocationOn } from "react-icons/md"
+import { MdPhoneIphone, MdCalendarToday, MdLocationOn } from "react-icons/md"
 import { SiTiktok } from "react-icons/si"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
@@ -23,9 +23,9 @@ export default function Sidebar() {
   const [currentImage, setCurrentImage] = useState(0)
 
   const images = [
-    "https://i.postimg.cc/W46PHgV6/1.jpg",
-    "https://i.postimg.cc/J4fV7P42/2.png",
-    "https://i.postimg.cc/T1BSw3Gn/3.png",
+    // "/shillmonger.jpeg",
+    // "/shillmonger.jpeg",
+    "/shillmonger.jpeg",
   ]
 
   // ✅ Always call hooks before any conditional returns
@@ -42,12 +42,12 @@ export default function Sidebar() {
 
   // ✅ Instead of returning null early, conditionally render inside JSX
   return (
-    <aside className="flex-1 bg-card border border-border rounded-3xl px-4 py-6 md:p-7 shadow-lg overflow-y-auto transition-colors duration-300">
+    <aside className="flex-1 bg-card border border-border rounded-2xl px-4 py-6 md:p-5 shadow-lg overflow-y-auto transition-colors duration-300">
       {mounted && (
         <>
           {/* Avatar */}
           <div className="flex flex-col items-center">
-            <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-3xl bg-muted">
+            <div className="relative w-50 h-50 mb-4 overflow-hidden rounded-xl bg-muted">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentImage}
@@ -61,7 +61,7 @@ export default function Sidebar() {
                     src={images[currentImage]}
                     alt="Shillmonger Avatar"
                     fill
-                    className="object-cover rounded-3xl"
+                    className="object-cover"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -96,18 +96,6 @@ export default function Sidebar() {
   <ul className="space-y-3">
     {[
       {
-        icon: <MdEmail />,
-        label: "EMAIL",
-        value: (
-          <Link
-            href="mailto:shillmonger0@gmail.com"
-            className="text-sm text-primary hover:text-primary/80 transition-colors"
-          >
-            shillmonger0@gmail.com
-          </Link>
-        ),
-      },
-      {
         icon: <MdPhoneIphone />,
         label: "PHONE",
         value: (
@@ -124,10 +112,10 @@ export default function Sidebar() {
         label: "BIRTHDAY",
         value: (
           <time
-            dateTime="2003-11-25"
+            dateTime="2004-11-25"
             className="text-sm text-muted-foreground"
           >
-            November 25, 2003
+            November 25, 2004
           </time>
         ),
       },
@@ -143,7 +131,7 @@ export default function Sidebar() {
     ].map((item, idx) => (
       <li
         key={idx}
-        className="flex items-center gap-4 rounded-2xl px-4 py-4 bg-muted/60 border border-border/50 shadow-sm hover:shadow-md hover:bg-muted transition-all duration-300"
+        className="flex items-center cursor-pointer gap-4 rounded-2xl px-3 py-3 bg-muted/60 border border-border/50 shadow-sm hover:shadow-md hover:bg-muted transition-all duration-300"
       >
         {/* Icon bubble */}
         <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary text-lg shrink-0">
@@ -182,10 +170,10 @@ export default function Sidebar() {
         icon: <FaWhatsapp />,
       },
       { href: "https://github.com/shillmonger", icon: <FaGithub /> },
-      // {
-      //   href: "#",
-      //   icon: <FaInstagram />,
-      // },
+      {
+        href: "https://t.me/shillmonger0",
+        icon: <FaTelegram />,
+      },
       {
         href: "https://www.tiktok.com/@shillmonger0?lang=en",
         icon: <SiTiktok />,

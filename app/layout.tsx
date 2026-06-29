@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Providers } from "@/components/providers";
+import Sidebar from "@/components/landing-page/Sidebar";
+import Nav from "@/components/landing-page/Nav";
 
 export const metadata = {
   title: "shillmonger",
