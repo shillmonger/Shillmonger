@@ -162,7 +162,7 @@ export default function Sidebar() {
     {[
       // { href: "#", icon: <FaFacebook /> },
       {
-        href: "https://x.com/shillmonger0?t=yMkjGvcK9ujwCdubEJKNBQ&s=09",
+        href: "https://x.com/shillmonger0",
         icon: <FaTwitter />,
       },
       {
