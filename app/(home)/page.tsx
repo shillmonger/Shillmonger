@@ -84,14 +84,23 @@ export default function HomePage() {
           </p>
 
          {/* Resume button positioned naturally */}
-<div className="pt-4">
+<div className="flex gap-2 lg:gap-10 justify-between lg:justify-center pt-4">
+  <a
+    href="/Certificate.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex px-5 py-2.5 rounded-lg text-lg font-semibold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
+  >
+    My Certificate
+  </a>
+
   <a
     href="/ShillmongerCV.pdf"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex px-8 py-2.5 rounded-lg text-lg font-semibold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
+    className="inline-flex px-5 py-2.5 rounded-lg text-lg font-semibold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-200 shadow-md hover:shadow-lg"
   >
-    View My Resume
+    My Resume
   </a>
 </div>
 
