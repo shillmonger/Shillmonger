@@ -145,7 +145,7 @@ export default function Sidebar() {
             href="tel:+2348059268860"
             className="text-sm text-muted-foreground hover:text-primary/80 transition-colors"
           >
-            +2348059268860
+            +2347045167609
           </Link>
         ),
       },
