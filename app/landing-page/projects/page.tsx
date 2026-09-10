@@ -20,6 +20,22 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+    title: "Nexis HQ",
+    category: "Web Application",
+    image: "https://i.postimg.cc/VsC9XvrT/Screenshot-2026-09-10-143048.png",
+    link: "https://nexis-hq.vercel.app/",
+    description:
+      "Empower your Web3 community with automated Discord moderation, NFT holder tier verification, prediction markets, Arena competitions, and real-time market intelligence.",
+  },
+    {
+    title: "Premium XP Bot",
+    category: "Web Development",
+    image: "https://i.postimg.cc/y8Hz7D90/Screenshot-2026-09-10-143854.png",
+    link: "https://premium-xp-bot.vercel.app/",
+    description:
+      "Earn XP by participating in activities. The bot tracks progress and rewards users with badges and privileges that can be creadited to your Wallet.",
+  },
   {
     title: "Cyber Yearn",
     category: "Web Application",
@@ -127,10 +143,10 @@ const projects: Project[] = [
       "A Meme Coin Project built on a decentralized web platform. This project focuses on the initial launch and distribution phase for a new cryptocurrency token.",
   },
   {
-    title: "Investmentz",
+    title: "Investment",
     category: "Web Application",
     image: "https://i.postimg.cc/cJM7Kzfj/Screenshot-2026-04-21-135409.jpg",
-    link: "https://regalinvestmentz.com",
+    link: "https://regal-funds.vercel.app/",
     description:
       "An elegant financial web application offering real-time investment tracking and performance analytics. Designed for modern investors with usability in mind.",
   },
