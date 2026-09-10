@@ -112,7 +112,7 @@ export default function Sidebar() {
               <span className="inline-block w-2 h-6 bg-foreground ml-1 animate-pulse" />
             </h1>
             <p className="bg-muted px-4 py-1 mt-2 text-sm text-muted-foreground rounded-md">
-              Full Stack Developer
+              FULL STACK DEVELOPER
             </p>
           </div>
 

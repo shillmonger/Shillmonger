@@ -5,7 +5,7 @@ import Sidebar from "@/components/landing-page/Sidebar";
 import Nav from "@/components/landing-page/Nav";
 
 export const metadata = {
-  title: "shillmonger",
+  title: "SHILLMONGER - Let me make you a Website",
   description: "Let me make you a Website",
 };
 
