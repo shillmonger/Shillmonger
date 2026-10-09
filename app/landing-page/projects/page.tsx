@@ -21,6 +21,14 @@ interface Project {
 
 const projects: Project[] = [
     {
+    title: "Peculiar Dizynz",
+    category: "Web Application",
+    image: "https://i.postimg.cc/vZGMxXTT/Screenshot-2026-10-09-124005.png",
+    link: "https://peculiar-dizynz.vercel.app/",
+    description:
+      "WHERE CREATIVITY MEETS EXPERIENCE, Graphic and UI/UX designs that build memorable brands and meaningful digital experiences.",
+  },
+    {
     title: "Nexis HQ",
     category: "Web Application",
     image: "https://i.postimg.cc/VsC9XvrT/Screenshot-2026-09-10-143048.png",
